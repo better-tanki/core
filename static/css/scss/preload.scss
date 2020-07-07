@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+}
+
+div#preloader,
+div[data-style="ApplicationComponentStyle-container Common-background"] {
+	display: flex;
+
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+
+	user-select: none;
+
+	div.bt-preload__text-loading {
+		margin-top: 12rem;
+
+		font-family: 'Exo 2', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 2rem;
+	
+		text-decoration: none;
+	
+		color: #ffffff;
+
+		&.bt-preload__text-loading-module {
+			margin-top: 1rem;
+
+			font-size: 1.6rem;
+		}
+	}
+
+	div.progress {
+		width: 100%;
+		height: 0.6rem;
+
+		margin-top: 1rem;
+
+		background-color: transparent;
+
+		div.progress-completed {
+			width: 0%;
+			height: inherit;
+
+			background-color: #15f304;
+
+			//transition: width 5000ms linear;
+		}
+	}
+}
+
+div[data-style="ApplicationComponentStyle-container Common-background"] {
+	background: none;
+
+	img[data-style="ApplicationComponentStyle-logo"] {
+		display: none;
+	}
+
+	& > div:nth-child(2) {
+		display: none;
+	}
+
+	div[data-style="ApplicationComponentStyle-helpContainer"] {
+		bottom: 1rem;
+		
+		background-color: #000000ee;
+	}
+}

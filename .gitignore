@@ -1,0 +1,12 @@
+/node_modules
+/build
+/dist
+/logs/*
+
+/static/css/*
+!/static/css/scss
+
+/plugins/*
+!/plugins/src
+!/plugins/plugin-api.d.ts
+!/plugins/tsconfig.json

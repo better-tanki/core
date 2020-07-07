@@ -1,0 +1,50 @@
+{
+	"name": "better-tanki-core",
+	"version": "1.0.0",
+	"description": "",
+	"main": "build/app.js",
+	"scripts": {
+		"start": "electron .",
+		"start-hw": "electron --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization .",
+		"start-dev": "nodemon --exec \"electron .\"",
+		"build": "tsc",
+		"build-dev": "tsc --watch"
+	},
+	"author": "Assasans",
+	"license": "MIT",
+	"dependencies": {
+		"@discordjs/collection": "^0.1.5",
+		"bluebird": "^3.7.2",
+		"chalk": "^4.1.0",
+		"common-tags": "^1.8.0",
+		"decimal.js": "^10.2.0",
+		"decompress": "^4.2.1",
+		"jquery": "^3.5.1",
+		"lodash": "^4.17.15",
+		"log4js": "^6.3.0",
+		"luxon": "^1.24.1",
+		"minimist": "^1.2.5",
+		"promise-fs": "^2.1.1",
+		"request": "^2.88.2",
+		"request-promise": "^4.2.5",
+		"source-map-support": "^0.5.19",
+		"xregexp": "^4.3.0"
+	},
+	"devDependencies": {
+		"@types/bluebird": "^3.5.32",
+		"@types/common-tags": "^1.8.0",
+		"@types/decompress": "^4.2.3",
+		"@types/jquery": "^3.5.0",
+		"@types/lodash": "^4.14.157",
+		"@types/luxon": "^1.24.1",
+		"@types/minimist": "^1.2.0",
+		"@types/node": "^12.12.47",
+		"@types/promise-fs": "^2.1.0",
+		"@types/request": "^2.48.5",
+		"@types/request-promise": "^4.1.46",
+		"@types/xregexp": "^4.3.0",
+		"electron": "^9.0.5",
+		"nodemon": "^2.0.4",
+		"typescript": "^3.9.5"
+	}
+}

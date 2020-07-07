@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="GlobalStyle-html">
+<head>
+	<base href="https://tankionline.com/" />
+	<!--<base href="https://public-deploy2.test-eu.tankionline.com/" />-->
+
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BetterTanki</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
+	<script async src="https://apis.google.com/js/platform.js"></script>
+
+	<style>
+		.GlobalStyle-html, .GlobalStyle-body {
+			width: 100%;
+			height: 100%;
+
+			font-family: 'Open Sans';
+
+			background-color: transparent;
+			background-size: cover;
+			background-position-y: center;
+			background-position-x: left;
+
+			overflow: hidden;
+		}
+
+		.logo {
+			position: absolute;
+
+			top: 30%;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+		}
+
+		.loading-text {
+			position: absolute;
+			top: 100%;
+			left: 50px;
+			color: white;
+			font-family: sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 2rem;
+			line-height: 30px;
+			transform: translate(0%, -65px);
+		}
+
+		div#bt-background {
+			position: absolute;
+
+			width: 100%;
+			height: 100%;
+
+			top: 0;
+			left: 0;
+
+			z-index: -1;
+		}
+
+		img#bt-background {
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+			object-position: center left;
+
+			filter: brightness(0.8) blur(2px);
+		}
+
+		div.bt-background-error {
+			z-index: 1;
+		}
+
+		img.bt-background-error {
+			filter: brightness(0.6) !important;
+		}
+
+		#modal-root { pointer-events: none;	}
+		#modal-root > div { pointer-events: auto; }
+	</style>
+	<style id="media" type="text/css"></style>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="client-Launcher"><link rel="icon" type="image/png" sizes="32x32" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/favicon-16x16.png"><link rel="shortcut icon" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/favicon.ico"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="client-Launcher"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/play/static/icons-8514ebb105092137ba2211d8b1887a62/apple-touch-startup-image-1536x2008.png"><link as="font" crossorigin="anonymous" href="/play/static/fonts/open-sans-v16-cyrillic_latin-700.862115d3.woff2" rel="preload"><link as="font" crossorigin="anonymous" href="/play/static/fonts/open-sans-v16-cyrillic_latin-regular.aeb4b1bf.woff2" rel="preload">
+</head>
+<body class="GlobalStyle-body">
+	<div id="bt-background">
+		<img id="bt-background" src="https://xtanki.ru/Photo/Wallpaper/TankiX_Wallpaper_City%20battle.jpg">
+	</div>
+
+	<div id="bt-plugins-modal__container" style="display: none;">
+		<div id="bt-plugins-modal">
+			<div id="bt-plugins__left-container">
+				<div id="bt-plugins__search-container">
+					<input id="bt-plugins__search" type="text" placeholder="Введите название плагина" />
+					<span id="bt-plugins__search-icon" class="material-icons-round">search</span>
+				</div>
+				<div id="bt-plugins__list"></div>
+			</div>
+			<div id="bt-plugin-info">
+				<div id="bt-plguin-info__header" style="margin-bottom: 0.5rem;">
+					<span class="bt-plugin__name">missing value</span>
+				</div>
+				<div id="bt-plugin-info__content">
+					<span class="bt-plugin__description">missing value</span>
+					<div class="bt-plugin__details">
+						<div id="bt-plugin__details-row__name" class="bt-plugin__details-row">
+							<span class="bt-plugin__details-row__name">Название</span>
+							<span class="bt-plugin__details-row__value">missing value</span>
+						</div>
+						<div id="bt-plugin__details-row__version" class="bt-plugin__details-row">
+							<span class="bt-plugin__details-row__name">Версия</span>
+							<span class="bt-plugin__details-row__value">missing value</span>
+						</div>
+						<div id="bt-plugin__details-row__author" class="bt-plugin__details-row">
+							<span class="bt-plugin__details-row__name">Автор</span>
+							<span class="bt-plugin__details-row__value">missing value</span>
+						</div>
+					</div>
+				</div>
+				<div id="bt-plugin-info__buttons">
+					<button id="bt-plugin-button__install">Установить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="preloader">
+		<div class="bt-preload__text-loading">Загрузка...</div>
+		<div class="progress">
+			<div class="progress-completed"></div>
+		</div>
+		<div class="bt-preload__text-loading bt-preload__text-loading-module">Preload</div>
+	</div>
+	<div id="modal-root"></div>
+	<div id="root" class="GlobalStyle-wrapper"></div>
+
+	<!--<link rel="stylesheet" href="/play/static/css/main.d197405c.css">-->
+
+	<script>
+		const $ = require('jquery');
+
+		function loadJS(url) {
+			const head = document.getElementsByTagName('head').item(0);
+			const script = document.createElement('script');
+			script.src = url;
+			script.async = 'async';
+			head.appendChild(script);
+		}
+
+		function loadCSS(url) {
+			const head = document.getElementsByTagName('head').item(0);
+			const link = document.createElement('link');
+			link.href = url;
+			link.rel = 'stylesheet';
+			head.appendChild(link);
+		}
+
+		function loadLocalCSS(url) {
+			const head = document.getElementsByTagName('head').item(0);
+			const link = document.createElement('link');
+			link.href = require('path').join(__dirname, url);
+			link.rel = 'stylesheet';
+			head.appendChild(link);
+		}
+
+		loadLocalCSS('../css/preload.css');
+		loadLocalCSS('../css/plugins.css');
+
+		//loadCSS('/browser-public/static/css/main.0617e0b5.css');
+		//loadJS('/browser-public/static/js/main.53bfdfc1.js');
+
+		const Bluebird = require('bluebird');
+
+		let loadingCount = 0;
+		let loading = false;
+
+		function startLoading() {
+			loading = true;
+			loadingCount = 0;
+
+			animate();
+		}
+
+		function resumeLoading() {
+			loading = true;
+
+			animate();
+		}
+
+		function stopLoading() {
+			loading = false;
+			loadingCount = 0;
+
+			$('div.progress div.progress-completed')
+				.css('transition', '')
+				.css('width', '0%');
+		}
+
+		async function animate() {
+			$('div.progress div.progress-completed')
+				.css('transition', '')
+				.css('width', `${loadingCount > 0 ? '30' : '0'}%`);
+
+			await Bluebird.delay(50);
+			
+			const duration = (loadingCount * 1000) + 5000;
+			$('div.progress div.progress-completed')
+				.css('transition', `width ${duration}ms linear`)
+				.css('width', '100%');
+
+			await Bluebird.delay(duration);
+
+			loadingCount++;
+			if(loading) animate();
+		}
+
+		function setLoadingModule(name) {
+			$('div.bt-preload__text-loading-module').text(name);
+		}
+
+		startLoading();
+
+		$('div#root').on('DOMNodeInserted', 'div[data-style="ApplicationComponentStyle-container Common-background"]', (event) => {
+			if($('div.bt-preload__text-loading').length > 0) return;
+			
+			$(event.target).append($(`
+				<div class="bt-preload__text-loading">Загрузка...</div>
+				<div class="progress">
+					<div class="progress-completed"></div>
+				</div>
+				<div class="bt-preload__text-loading bt-preload__text-loading-module">Tanki Online</div>
+			`));
+			resumeLoading();
+		});
+//data-style="ApplicationComponentStyle-helpContainer"
+		window.loadJS = loadJS;
+		window.loadCSS = loadCSS;
+		window.setLoadingModule = setLoadingModule;
+	</script>
+
+	<!--<script type="text/javascript" src="/play/static/js/main.c93ae28f.js"></script>-->
+</body>
+</html>
