@@ -43,7 +43,7 @@
 		"@types/request": "^2.48.5",
 		"@types/request-promise": "^4.1.46",
 		"@types/xregexp": "^4.3.0",
-		"electron": "^9.0.5",
+		"electron": "^9.3.0",
 		"nodemon": "^2.0.4",
 		"typescript": "^3.9.5"
 	}
