@@ -76,7 +76,7 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "source-map-support": "^0.5.19",
-    "ws": "^7.4.3",
+    "ws": "^7.4.6",
     "xregexp": "^5.0.1"
   },
   "devDependencies": {
