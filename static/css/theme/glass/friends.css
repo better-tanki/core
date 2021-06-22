@@ -1,0 +1,29 @@
+/* Friends menu container */
+div[data-style=FriendListComponentStyle-containerFriends] {
+  /* Friends list item */
+  /* Requests / referrals list */
+}
+div[data-style=FriendListComponentStyle-containerFriends] div[data-style=FriendListComponentStyle-blockList] {
+  border-radius: 2px;
+  background: #ffffff15;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=FriendListComponentStyle-containerFriends] div[data-style=FriendListComponentStyle-blockList]:hover {
+  background: #ffffff30;
+}
+div[data-style=FriendListComponentStyle-containerFriends] div[data-style=FriendListComponentStyle-blockList] > div {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+div[data-style=FriendListComponentStyle-containerFriends] div[data-style=FriendListComponentStyle-blockList] > div:first-child {
+  margin-left: 0.6em;
+}
+div[data-style=FriendListComponentStyle-containerFriends] div[data-style=FriendListComponentStyle-blockList] > div:last-child {
+  margin-right: 0.6em;
+}
+div[data-style=FriendListComponentStyle-containerFriends] table[data-style=TableComponentStyle-table] > thead th {
+  background: transparent;
+}
+
+/*# sourceMappingURL=friends.css.map */

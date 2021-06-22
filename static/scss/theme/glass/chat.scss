@@ -1,0 +1,87 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Chat close area */
+div[data-style="ChatComponentStyle-closeArea"] {
+	@include no-background();
+}
+
+/* Chat window */
+div[data-style="ChatComponentStyle-chatWindow"] {
+	@include background-color($backgroundLevel2);
+
+	backdrop-filter: blur(6px);
+
+	& > div[data-style="ChatComponentStyle-upMenu"] {
+		@include no-background();
+	}
+
+	/* Chat message */
+	div[data-style="ChatComponentStyle-messagesContainer"] {
+		/* Normal message */
+		& > div[data-style="ChatComponentStyle-messageRow"] {
+			filter: drop-shadow(1px 1px 2px $shadowLevel1);
+
+			/* Message time */
+			& > div[data-style="ChatComponentStyle-timeContainer"] {
+				@include no-select();
+			}
+
+			/* Message author container */
+			& > div[data-style="ChatComponentStyle-chatUserLabel Font-smalls Font-normal"] {
+				/* Message author rank image */
+				& > img {
+					@include no-select();
+				}
+
+				/* Message author username */
+				& > span {
+					color: #ffffff;
+				}
+			}
+
+			/* Message content */
+			& > div[data-style="ChatComponentStyle-message Font-smalls Font-normal"] {
+				color: #ffffff;
+			}
+
+			/* Direct message icon */
+			& > img[data-style="ChatComponentStyle-directMessageIcon"] {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		/* Date message container */
+		& > div[data-style="ChatComponentStyle-dateContainer Font-smalls Font-normal"] {
+			/* Date message */
+			& > span {
+				@include no-select();
+
+				filter: drop-shadow(1px 1px 2px $shadowLevel1);
+
+				color: #ffffff;
+			}
+		}
+	}
+
+	/* Message input container */
+	& > div[data-style="ChatComponentStyle-inputContainer Common-backgroundColor"] {
+		@include no-border();
+
+		@include background-color($backgroundLevel1);
+
+		width: 100%;
+
+		margin: 0;
+
+		/* Message input field */
+		& > input {
+			text-shadow: 1px 1px 3px #000000;
+		}
+
+		/* Send message button */
+		& > div[data-style="ChatComponentStyle-sendButton"] {
+			@include no-select();
+		}
+	}
+}

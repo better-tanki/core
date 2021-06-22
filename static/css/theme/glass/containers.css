@@ -1,0 +1,93 @@
+/* Containers menu */
+div[data-style=ContainersStyle-lootBoxContainers] {
+  /* Available containers */
+  /* Rewards */
+  /* Reward filters */
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=ScrollBarStyle-itemsContainer] > div {
+  border-left: none;
+  border-right: none;
+  border-top: 3px solid #ffffff50;
+  border-bottom: none;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+  /* Selected */
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=ScrollBarStyle-itemsContainer] > div:not(.ciyQLy):hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=ScrollBarStyle-itemsContainer] > div.ciyQLy {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-scrollBlockReward],
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=ContainersStyle-scrollBlockReward] > div {
+  /* Reward item */
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-scrollBlockReward] > div,
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=ContainersStyle-scrollBlockReward] > div > div {
+  background: #00000030;
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-containerForPossibleRewards] {
+  /* Reward filter */
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-containerForPossibleRewards] > div > div {
+  border-left: 3px solid #ffffff50;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-left-color;
+  /* Selected */
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-containerForPossibleRewards] > div > div:not(.cNlUtX):hover {
+  border-left-color: #ffffff80;
+  background: #00000060;
+}
+div[data-style=ContainersStyle-lootBoxContainers] div[data-style=Style-containerForPossibleRewards] > div > div.cNlUtX {
+  border-left-color: #ffffffc0;
+  background: #00000080;
+}
+
+/* Rewards menu */
+div[data-style=Style-containerCenterLootBox] {
+  /* Rewards */
+  /* Item information */
+}
+div[data-style=Style-containerCenterLootBox] div[data-style=Style-scrollBlockReward] {
+  /* Reward item */
+}
+div[data-style=Style-containerCenterLootBox] div[data-style=Style-scrollBlockReward] > div {
+  border-top: 3px solid #ffffff50;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+  /* Selected */
+}
+div[data-style=Style-containerCenterLootBox] div[data-style=Style-scrollBlockReward] > div:not(.huUaMh):hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+div[data-style=Style-containerCenterLootBox] div[data-style=Style-scrollBlockReward] > div.huUaMh {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+div[data-style=Style-containerCenterLootBox] > div:last-child {
+  border-top-width: 3px;
+  background: #00000030;
+  /* item title container (header) */
+  /* Item corners (rarity) */
+  /* Bottom white stripes */
+}
+div[data-style=Style-containerCenterLootBox] > div:last-child > div[data-style=Style-rewardNameContainer] {
+  background: #00000030;
+}
+div[data-style=Style-containerCenterLootBox] > div:last-child img[data-style="Style-rewardCategoryIcon Style-categoryIcon"],
+div[data-style=Style-containerCenterLootBox] > div:last-child img[data-style="Style-rotateAngleContainers Style-categoryIcon"] {
+  display: none;
+}
+div[data-style=Style-containerCenterLootBox] > div:last-child img[data-style=Style-marginImageJewelery] {
+  display: none;
+}
+
+/*# sourceMappingURL=containers.css.map */

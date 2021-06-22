@@ -1,0 +1,32 @@
+div.progress {
+	display: flex;
+
+	height: 1em;
+
+	border-radius: 2px;
+
+	background-color: green;
+
+	& > div.progress-value {
+		display: flex;
+
+		height: inherit;
+
+		border-radius: inherit;
+
+		background-color: red;
+
+		transition-property: background-color;
+		transition: 150ms linear;
+	}
+}
+
+// TODO(Assasans): Not implemented
+div.progress-circular {
+	padding: 1em;
+
+	font-weight: 600;
+
+	background-color: red;
+	color: white;
+}

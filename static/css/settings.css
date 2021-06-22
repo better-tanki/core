@@ -1,0 +1,40 @@
+div.bt-settings {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #000000e0;
+  z-index: 5;
+  user-select: none;
+}
+div.bt-settings--fade-in {
+  animation: 500ms ease-in fade-in;
+}
+div.bt-settings--fade-out {
+  animation: 500ms ease-out fade-out;
+}
+div.bt-settings div.bt-settings-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=settings.css.map */

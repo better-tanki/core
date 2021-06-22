@@ -1,0 +1,98 @@
+$pluginIconSize: 3em;
+
+div.plugin-list {
+	display: flex;
+
+	flex-direction: column;
+
+	padding: 0.5em;
+
+	border-radius: 2px;
+
+	font-family: 'Exo 2', sans-serif;
+
+	background-color: #ffffff50;
+
+	& > div.plugin {
+		display: flex;
+
+		padding: 0.5em;
+
+		border-radius: 2px;
+
+		background-color: #000000aa;
+
+		&:not(:last-of-type) {
+			margin-bottom: 0.5em;
+		}
+
+		& > div.plugin-icon-container {
+			display: flex;
+
+			margin-right: 0.5em;
+
+			& > img.plugin-icon {
+				width: $pluginIconSize;
+				height: $pluginIconSize;
+
+				min-width: $pluginIconSize;
+				min-height: $pluginIconSize;
+
+				border-radius: 3px;
+
+				object-fit: cover;
+			}
+		}
+
+		& > div.plugin-content {
+			display: flex;
+
+			flex: 1 1 auto;
+			flex-direction: column;
+
+			& > div.plugin-title {
+				display: flex;
+
+				justify-content: space-between;
+
+				& > div.plugin-name-version {
+					display: flex;
+
+					justify-content: space-between;
+
+					& > div.plugin-name {
+						font-weight: 600;
+					}
+
+					& > div.plugin-version {
+						margin-left: 1em;
+
+						font-weight: 300;
+					}
+				}
+
+				& > div {
+					display: flex;
+
+					& > div.plugin-author {
+						display: flex;
+
+						margin-left: 1em;
+
+						& > *:not(:last-child) {
+							margin-right: 0.25em;
+						}
+
+						& > span.plugin-author--name {
+							font-weight: 300;
+						}
+
+						& > div.plugin-author--value {
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+}

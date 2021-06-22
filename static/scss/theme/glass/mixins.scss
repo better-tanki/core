@@ -1,0 +1,24 @@
+@mixin hide() {
+	display: none;
+}
+
+@mixin no-background() {
+	background: transparent;
+}
+
+@mixin background-color($color) {
+	background: $color;
+}
+
+@mixin no-border() {
+	border: none;
+}
+
+@mixin no-shadow() {
+	box-shadow: none;
+	text-shadow: none;
+}
+
+@mixin no-select() {
+	user-select: none;
+}

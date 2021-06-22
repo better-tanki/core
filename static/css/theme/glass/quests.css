@@ -1,0 +1,187 @@
+/* Quests window container */
+div[data-style=QuestComponentStyle-content] {
+  background: transparent;
+}
+
+/* Special quest item */
+div[data-style=MainQuestComponentStyle-container],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] {
+  border: none;
+  background: #00000030;
+  border-left: 3px solid;
+  /* Rewards */
+  /* Complete / unblock / claim button */
+  /* Completion progress */
+}
+div[data-style=MainQuestComponentStyle-container].bt-quest--play,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"].bt-quest--play {
+  border-left-color: #03a9f4;
+}
+div[data-style=MainQuestComponentStyle-container].bt-quest--unlock,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"].bt-quest--unlock {
+  border-left-color: #ff9800;
+}
+div[data-style=MainQuestComponentStyle-container].bt-quest--claim,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"].bt-quest--claim {
+  border-left-color: #4caf50;
+}
+div[data-style=MainQuestComponentStyle-container].bt-quest--empty,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"].bt-quest--empty {
+  border-left-color: #ffffff;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-descriptionContainer2],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-descriptionContainer2] {
+  display: none;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-rewardsContainer],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-rewardsContainer] {
+  /* Reward */
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-rewardsContainer] > div[data-style=QuestRewardComponentStyle-reward],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-rewardsContainer] > div[data-style=QuestRewardComponentStyle-reward] {
+  background: #00000030;
+}
+div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress] {
+  background: transparent;
+}
+div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-bar, div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-value,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-bar,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-value {
+  border: none;
+  border-radius: 8px;
+}
+div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-bar,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-bar {
+  background-color: #00000030;
+}
+div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-value,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress]::-webkit-progress-value {
+  background: #ffffffe0;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer] {
+  background: transparent;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--play:hover,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--play:hover {
+  background: #03a9f4;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--play > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--play > span {
+  color: #03a9f4;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--unlock:hover,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--unlock:hover {
+  background: #ff9800;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--unlock > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--unlock > span {
+  color: #ff9800;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim:hover,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim:hover {
+  background: #4caf50;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim > span {
+  color: #4caf50;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim > div > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer].bt-quest-button--claim > div > span {
+  text-shadow: 1px 1px 3px #00000050;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer] > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer] > span {
+  text-shadow: 1px 1px 3px #00000050;
+  transition: 100ms ease-in-out;
+  transition-property: color;
+}
+div[data-style=MainQuestComponentStyle-container] div[data-style=MainQuestComponentStyle-buttonContainer]:hover > span,
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] div[data-style=MainQuestComponentStyle-buttonContainer]:hover > span {
+  color: #ffffff;
+}
+div[data-style=MainQuestComponentStyle-container] progress[data-style=MainQuestComponentStyle-progress],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] progress[data-style=MainQuestComponentStyle-progress] {
+  width: initial;
+  margin-left: 1.438em;
+}
+
+/* Daily / weekly quests */
+div[data-style=QuestsComponentStyle-questBlock] {
+  /* Quest item */
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission], div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] {
+  border: none;
+  background: #00000030;
+  /* Rewards */
+  /* Button */
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] div[data-style=QuestDescriptionComponentStyled-aboutMission] > img:first-child, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] div[data-style=QuestDescriptionComponentStyled-aboutMission] > img:first-child {
+  display: none;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] div[data-style=QuestRewardsComponentStyle-stringRewards], div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] div[data-style=QuestRewardsComponentStyle-stringRewards] {
+  /* Reward */
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] div[data-style=QuestRewardsComponentStyle-stringRewards] > div[data-style=QuestRewardComponentStyle-reward], div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] div[data-style=QuestRewardsComponentStyle-stringRewards] > div[data-style=QuestRewardComponentStyle-reward] {
+  background: #00000030;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child {
+  background: transparent;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+  border-bottom: 3px solid;
+  /* Claim reward button */
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--change, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--change {
+  border-bottom-color: #f44336;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--change:hover, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--change:hover {
+  background: #f44336;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--change > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--change > span {
+  color: #f44336;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--play, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--play {
+  border-bottom-color: #03a9f4;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--play:hover, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--play:hover {
+  background: #03a9f4;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--play > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--play > span {
+  color: #03a9f4;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--claim, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--claim {
+  border-bottom-color: #4caf50;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--claim:hover, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--claim:hover {
+  background: #4caf50;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--claim:hover > div > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--claim:hover > div > span {
+  color: #ffffff;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child.bt-quest-button--claim > div > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child.bt-quest-button--claim > div > span {
+  color: #4caf50;
+  transition: 100ms ease-in-out;
+  transition-property: color;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child > span {
+  text-shadow: 1px 1px 3px #00000050;
+  transition: 100ms ease-in-out;
+  transition-property: color;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child:hover > span, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child:hover > span {
+  color: #ffffff;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child > div[data-style=DailyQuestComponentStyle-claimReward], div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child > div[data-style=DailyQuestComponentStyle-claimReward] {
+  background: transparent;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=QuestsComponentStyle-questBlock] > div[data-style=QuestBlockComponentStyle-dailyMission] > div:last-child > div[data-style=DailyQuestComponentStyle-claimReward]:hover, div[data-style=QuestsComponentStyle-questBlock] > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] > div:last-child > div[data-style=DailyQuestComponentStyle-claimReward]:hover {
+  background: transparent;
+}
+
+/*# sourceMappingURL=quests.css.map */

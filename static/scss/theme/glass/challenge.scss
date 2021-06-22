@@ -1,0 +1,147 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Challenge menu */
+div[data-style="QuestsChallengesComponentStyle-containerParametrsChallenge"] {
+	/* Stars progress container */
+	div[data-style="ChallengeInfoComponentStyle-blockStarsCount"] {
+		@include no-background();
+
+		progress[data-style="ChallengeProgressBarComponentStyle-progressBar"] {
+			@include no-background();
+			
+			&::-webkit-progress-bar,
+			&::-webkit-progress-value {
+				@include no-border();
+
+				border-radius: 8px;
+			}
+
+			&::-webkit-progress-bar {
+				background-color: #00000030;
+			}
+	
+			&::-webkit-progress-value {
+				background: #ffffffe0;
+			}
+		}
+	}
+
+	/* Time left container */
+	div[data-style="ChallengeTimerComponentStyle-blockTimer"] {
+		@include no-border();
+		@include no-background();
+	}
+
+	/* Main container (rewards, levels, tiers) */
+	div[data-style="QuestsChallengesComponentStyle-containerTiers"] {
+		@include no-background();
+	}
+
+	/* Purchase battle pass container */
+	div[data-style="ChallengePurchaseComponentStyle-blockPurchase"] {
+		@include no-background();
+	}
+
+	/* Tiers */
+	div[data-style="QuestsChallengesComponentStyle-blockTiers"] {
+		/* Header */
+		& > div[data-style="QuestsChallengesComponentStyle-descriptionTiers"] {
+			@include no-border();
+			@include no-background();
+
+			/* Text */
+			& > h2 {
+
+			}
+		}
+
+		/* Any */
+		& > div[data-style="QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"],
+		& > div[data-style="QuestsChallengesComponentStyle-premiumTier QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"] {
+			@include no-border();
+			@include no-background();
+		}
+
+		/* Common */
+		& > div[data-style="QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"] {
+
+		}
+
+		/* Premium */
+		& > div[data-style="QuestsChallengesComponentStyle-premiumTier QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"] {
+
+		}
+	}
+
+	/* Rewards */
+	div[data-style="ScrollBarStyle-itemsContainer"] {
+		/* Level container */
+		div[data-style="ChallengeTierComponentStyle-blockTier"] {
+			div[data-style="TierHeaderComponentStyle-descriptionTier"] {
+				@include no-border();
+				@include no-background();
+
+				flex-direction: column; // Vertical alignment fix
+
+				& > div[data-style="TierHeaderComponentStyle-tierActive"] {
+					@include no-border();
+
+					height: calc(100% - 3px); // Height fix
+
+					top: 0;
+
+					border-top: 3px solid #ffffffe0;
+
+					animation: 1s ease 0s infinite alternate none running opacity-flash;
+
+					@keyframes opacity-flash {
+						0%   { opacity: 0; }
+						100% { opacity: 1; }
+					}
+				}
+			}
+		}
+
+		/* Level rewards */
+		div[data-style="ChallengeTierComponentStyle-commonBlock"] {
+			/** Common tier **/
+
+			/* Any */
+			& > div[data-style="CommonTierItemComponentStyle-tier"],
+			& > div[data-style="CommonTierItemComponentStyle-tierOpacity CommonTierItemComponentStyle-tier"] {
+				border-top: 3px solid #ffffffe0;
+
+				background: #00000050;
+			}
+
+			/* Completed */
+			& > div[data-style="CommonTierItemComponentStyle-tier"] {
+			}
+
+			/* Unavailable */
+			& > div[data-style="CommonTierItemComponentStyle-tierOpacity CommonTierItemComponentStyle-tier"] {
+			}
+
+			/** Premium tier **/
+
+			/* Any */
+			& > div[data-style="PremiumTierItemComponentStyle-tierPremium"],
+			& > div[data-style="PremiumTierItemComponentStyle-tierPremiumOpacity PremiumTierItemComponentStyle-tierPremium"] {
+				border-top: 3px solid #fbc02de0;
+
+				background: #00000050;
+			}
+
+			/* Completed */
+			& > div[data-style="PremiumTierItemComponentStyle-tierPremium"] {
+
+			}
+
+			/* Unavilable */
+			& > div[data-style="PremiumTierItemComponentStyle-tierPremiumOpacity PremiumTierItemComponentStyle-tierPremium"] {
+
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+div.bt-notifications {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+div.notification-list {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  padding: 0.5em 0.5em;
+  font-family: "Exo 2", sans-serif;
+  /* & > div.notification-list {
+  	height: 100%;
+
+  	margin-top: auto;
+  } */
+}
+div.notification-list > div.notification {
+  position: relative;
+  display: flex;
+  margin-top: 0.5em;
+  border-radius: 2px;
+  font-weight: 300;
+  background-color: #000000aa;
+  backdrop-filter: blur(1px);
+  user-select: none;
+  transition-property: background-color;
+  transition: 50ms ease-in-out;
+}
+div.notification-list > div.notification:last-of-type {
+  margin-top: 0;
+}
+@keyframes slide-out {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -30em;
+  }
+}
+div.notification-list > div.notification.notification--slide-out {
+  animation: slide-out 500ms ease-in forwards;
+}
+div.notification-list > div.notification.notification--hidden {
+  right: -30em;
+}
+div.notification-list > div.notification.notification--hover {
+  background-color: #050505aa;
+}
+div.notification-list > div.notification.notification--hover > div.notification-level.notification-level--debug {
+  background-color: #80deea;
+}
+div.notification-list > div.notification.notification--hover > div.notification-level.notification-level--info {
+  background-color: #a5d6a7;
+}
+div.notification-list > div.notification.notification--hover > div.notification-level.notification-level--warn {
+  background-color: #ffe082;
+}
+div.notification-list > div.notification.notification--hover > div.notification-level.notification-level--error {
+  background-color: #ffab91;
+}
+div.notification-list > div.notification.notification--hover > div.notification-level.notification-level--fatal {
+  background-color: #ff7043;
+}
+div.notification-list > div.notification > div.notification-level {
+  width: 0.25em;
+  border-radius: 4px 0 0 4px;
+  transition-property: background-color;
+  transition: 50ms ease-in-out;
+}
+div.notification-list > div.notification > div.notification-level.notification-level--debug {
+  background-color: #4dd0e1;
+}
+div.notification-list > div.notification > div.notification-level.notification-level--info {
+  background-color: #81c784;
+}
+div.notification-list > div.notification > div.notification-level.notification-level--warn {
+  background-color: #ffd54f;
+}
+div.notification-list > div.notification > div.notification-level.notification-level--error {
+  background-color: #ff8a65;
+}
+div.notification-list > div.notification > div.notification-level.notification-level--fatal {
+  background-color: #ff5722;
+}
+div.notification-list > div.notification > div.notification-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.8em 1em;
+}
+div.notification-list > div.notification > div.notification-content > div.notification-title-container {
+  display: flex;
+  align-items: center;
+}
+div.notification-list > div.notification > div.notification-content > div.notification-title-container > div.notification-icon {
+  display: flex;
+  margin-right: 0.5em;
+}
+div.notification-list > div.notification > div.notification-content > div.notification-title-container > div.notification-icon img {
+  width: 2em;
+  height: 2em;
+  min-width: 2em;
+  min-height: 2em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+div.notification-list > div.notification > div.notification-content > div.notification-title-container > div.notification-title {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=notification.css.map */

@@ -1,0 +1,15 @@
+div.image-container {
+	display: flex;
+	
+	& > img.image {
+		border-radius: 2px;
+	}
+
+	&.image-container--hover {
+
+	}
+
+	&:not(.image-container--hover) {
+		
+	}
+}

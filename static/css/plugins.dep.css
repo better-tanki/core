@@ -1,0 +1,137 @@
+div#bt-plugins-modal__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000bb;
+  color: #fafafa;
+  backdrop-filter: blur(2px);
+  user-select: none;
+  outline: none;
+  z-index: 4000;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  background-color: #ffffff40;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container {
+  width: 65%;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__search-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0.5rem 1rem 1rem;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__search-container input#bt-plugins__search {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-bottom: 2px solid #ffffff63;
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  color: #fafafa;
+  transition: border-bottom-color 100ms;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__search-container input#bt-plugins__search:focus {
+  border-bottom-color: #ffffffcc;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__search-container input#bt-plugins__search::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  color: #b0b0b0;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__search-container span#bt-plugins__search-icon {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list {
+  display: flex;
+  flex-direction: column;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.3rem;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin:not(:first-child) {
+  border-top: 1px solid #b0b0b0;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin:hover {
+  background-color: #ffffff20;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin.bt-plugin--selected {
+  background-color: #006effb7;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin div.bt-plugin__header {
+  display: flex;
+  justify-content: space-between;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin div.bt-plugin__header span.bt-plugin__name {
+  font-weight: bold;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin div.bt-plugin__header span.bt-plugin__version {
+  margin-left: 0.25em;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugins__left-container div#bt-plugins__list div.bt-plugin span.bt-plugin__description {
+  display: block;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 1rem 1.3rem;
+  background-color: #00000080;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plguin-info__header {
+  margin-bottom: 0.5rem;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plguin-info__header span.bt-plugin__name {
+  display: block;
+  font-weight: bold;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__content {
+  height: 100%;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__content span.bt-plugin__description {
+  display: block;
+  margin-bottom: 1rem;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__content div.bt-plugin__details {
+  display: block;
+  margin-bottom: 1rem;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__content div.bt-plugin__details div.bt-plugin__details-row {
+  display: flex;
+  justify-content: space-between;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__content div.bt-plugin__details div.bt-plugin__details-row span.bt-plugin__details-row__name {
+  font-weight: bold;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__buttons button#bt-plugin-button__install {
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0d47a1;
+  color: #fafafa;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+div#bt-plugins-modal__container div#bt-plugins-modal div#bt-plugin-info div#bt-plugin-info__buttons button#bt-plugin-button__install:hover {
+  background-color: #1565c0;
+}
+
+/*# sourceMappingURL=plugins.dep.css.map */

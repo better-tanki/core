@@ -1,0 +1,55 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Clan menu */
+div[data-style="ClanCommonStyle-content"] {
+	@include no-background();
+
+	/* Information */
+	div[data-style="ClanHeaderComponentStyle-blockInform"] {
+		@include no-background();
+		@include no-border();
+
+		/* Statistics */
+		& > div[data-style="ClanStatisticsComponentStyle-clan"] {
+			& > div[data-style="ClanStatisticsComponentStyle-areCommon ClanStatisticsComponentStyle-marginLeftAreCommon"],
+			& > div[data-style="ClanStatisticsComponentStyle-areCommon"] {
+				@include no-background();
+				@include no-border();
+
+				box-shadow: 3px 3px 3px 0px #00000050;
+			}
+		}
+	}
+
+	/* Description */
+	div[data-style="ClanInfoComponentStyle-messageClan"] {
+		@include no-background();
+		@include no-border();
+	}
+
+	/* Members */
+	table[data-style="TableComponentStyle-table"] {
+		& > thead {
+			th {
+				@include no-background();
+			}
+		}
+
+		& > tbody {
+			tr {
+				margin-bottom: 3px;
+			}
+
+			tr[data-style="ClanCommonStyle-row"] {
+				background: #ffffff0a;
+			}
+
+			tr[data-style="ClanCommonStyle-rowEmpty ClanCommonStyle-row"] {
+				opacity: 1; // Fix
+
+				background: #ffffff06;
+			}
+		}
+	}
+}

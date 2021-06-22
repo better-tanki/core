@@ -1,0 +1,67 @@
+div.plugin-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  border-radius: 2px;
+  font-family: "Exo 2", sans-serif;
+  background-color: #ffffff50;
+}
+div.plugin-list > div.plugin {
+  display: flex;
+  padding: 0.5em;
+  border-radius: 2px;
+  background-color: #000000aa;
+}
+div.plugin-list > div.plugin:not(:last-of-type) {
+  margin-bottom: 0.5em;
+}
+div.plugin-list > div.plugin > div.plugin-icon-container {
+  display: flex;
+  margin-right: 0.5em;
+}
+div.plugin-list > div.plugin > div.plugin-icon-container > img.plugin-icon {
+  width: 3em;
+  height: 3em;
+  min-width: 3em;
+  min-height: 3em;
+  border-radius: 3px;
+  object-fit: cover;
+}
+div.plugin-list > div.plugin > div.plugin-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title {
+  display: flex;
+  justify-content: space-between;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div.plugin-name-version {
+  display: flex;
+  justify-content: space-between;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div.plugin-name-version > div.plugin-name {
+  font-weight: 600;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div.plugin-name-version > div.plugin-version {
+  margin-left: 1em;
+  font-weight: 300;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div {
+  display: flex;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div > div.plugin-author {
+  display: flex;
+  margin-left: 1em;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div > div.plugin-author > *:not(:last-child) {
+  margin-right: 0.25em;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div > div.plugin-author > span.plugin-author--name {
+  font-weight: 300;
+}
+div.plugin-list > div.plugin > div.plugin-content > div.plugin-title > div > div.plugin-author > div.plugin-author--value {
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=list.css.map */

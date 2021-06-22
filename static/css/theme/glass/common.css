@@ -1,0 +1,250 @@
+/* Root container */
+/* Common container */
+div[data-style=Common-container] {
+  background: #202020;
+  /* Header container */
+  /* Common content container */
+}
+div[data-style=Common-container] > div[data-style="BreadcrumbsComponentStyle-headerContainer Common-backgroundColor"] {
+  background: transparent;
+}
+div[data-style=Common-container] > div[data-style=Common-content] {
+  background: transparent;
+}
+div[data-style=Common-container] > div[data-style=BreadcrumbsComponentStyle-rightButtonsContainer]::before {
+  display: none;
+}
+
+/* Tips */
+div[data-style=InfoBlockStyle-blockInfo] {
+  align-items: center;
+  /* Left line */
+  /* Right line */
+}
+div[data-style=InfoBlockStyle-blockInfo] > div[data-style=InfoBlockStyle-leftLine] {
+  background: transparent;
+  border: none;
+}
+div[data-style=InfoBlockStyle-blockInfo] > div[data-style=InfoBlockStyle-string] {
+  background: transparent;
+}
+div[data-style=InfoBlockStyle-blockInfo] > div[data-style=InfoBlockStyle-string] div[data-style="InfoBlockStyle-enter Font-bold Font-normal"] {
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+/* Tooltips */
+div[data-style=TooltipStyle-tooltip] {
+  border-radius: 4px;
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  /* Tooltip orange corners */
+}
+div[data-style=TooltipStyle-tooltip] > div[data-style="TooltipStyle-leftTopCorner TooltipStyle-corner"], div[data-style=TooltipStyle-tooltip] > div[data-style="TooltipStyle-rightTopCorner TooltipStyle-corner"], div[data-style=TooltipStyle-tooltip] > div[data-style="TooltipStyle-leftBottomCorner TooltipStyle-corner"], div[data-style=TooltipStyle-tooltip] > div[data-style="TooltipStyle-rightBottomCorner TooltipStyle-corner"] {
+  display: none;
+}
+
+/* Notifications */
+div[data-style=NotificationViewStyle-commonBlockNotification] {
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  /* Header */
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] > div[data-style=NotificationViewStyle-headlineNotification] {
+  background: transparent;
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] > div[data-style=NotificationViewStyle-headlineNotification] > img:last-child {
+  display: none;
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] > div[data-style=NotificationViewStyle-blockButtonAndTimer] {
+  background: transparent;
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] progress[data-style=NotificationViewStyle-progressNotification] {
+  background: transparent;
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] progress[data-style=NotificationViewStyle-progressNotification]::-webkit-progress-bar {
+  background-color: #00000030;
+}
+div[data-style=NotificationViewStyle-commonBlockNotification] progress[data-style=NotificationViewStyle-progressNotification]::-webkit-progress-value {
+  background: #ffffffc0;
+}
+
+div#modal-root > div.modal.hover {
+  background: #00000070;
+}
+
+/* Modals */
+div[data-style=DialogContainerComponentStyle-container],
+div[data-style=ChooseCountryComponentStyle-container],
+div[data-style=SuccessfulPurchaseComponentStyle-container] {
+  background: #00000050;
+  backdrop-filter: blur(4px);
+  /* Modal header */
+  /* Top right lines */
+  /* Close button */
+}
+div[data-style=DialogContainerComponentStyle-container] > div[data-style=DialogContainerComponentStyle-header], div[data-style=DialogContainerComponentStyle-container] > div[data-style=ChooseCountryComponentStyle-headline],
+div[data-style=ChooseCountryComponentStyle-container] > div[data-style=DialogContainerComponentStyle-header],
+div[data-style=ChooseCountryComponentStyle-container] > div[data-style=ChooseCountryComponentStyle-headline],
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div[data-style=DialogContainerComponentStyle-header],
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div[data-style=ChooseCountryComponentStyle-headline] {
+  background: transparent;
+  margin-top: 1em;
+}
+div[data-style=DialogContainerComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgLine],
+div[data-style=ChooseCountryComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgLine],
+div[data-style=SuccessfulPurchaseComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgLine] {
+  display: none;
+}
+div[data-style=DialogContainerComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose],
+div[data-style=ChooseCountryComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose],
+div[data-style=SuccessfulPurchaseComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose] {
+  margin-right: 1.5em;
+  filter: brightness(0.75);
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=DialogContainerComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose]:hover,
+div[data-style=ChooseCountryComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose]:hover,
+div[data-style=SuccessfulPurchaseComponentStyle-container] img[data-style=DialogContainerComponentStyle-imgClose]:hover {
+  filter: brightness(1);
+}
+
+/* Purchase modal */
+div[data-style=SuccessfulPurchaseComponentStyle-container] {
+  /* Modal header */
+}
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div:first-child {
+  background: transparent;
+  /* Top right lines */
+  /* Close button */
+}
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div:first-child > div:nth-child(3) {
+  display: none;
+}
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div:first-child > img:last-child {
+  margin-right: 1.5em;
+  filter: brightness(0.75);
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=SuccessfulPurchaseComponentStyle-container] > div:first-child > img:last-child:hover {
+  filter: brightness(1);
+}
+
+/* Rankup modal */
+div[data-style="RankupComponentStyle-wrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] {
+  border-top: 3px solid #ffffff50;
+  border-bottom: 3px solid #ffffff50;
+  background: #00000050;
+  backdrop-filter: blur(6px);
+  /* Modal header */
+}
+div[data-style="RankupComponentStyle-wrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] > div[data-style="RankupComponentStyle-titleWrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] {
+  background: transparent;
+  /* Yellow lines */
+}
+div[data-style="RankupComponentStyle-wrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] > div[data-style="RankupComponentStyle-titleWrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] div[data-style="RankupComponentStyle-titleLineEmptyArea RankupComponentStyle-flex"] {
+  background: transparent;
+}
+div[data-style="RankupComponentStyle-wrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] > div[data-style="RankupComponentStyle-titleWrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] div[data-style=RankupComponentStyle-titleLineYellowLines] {
+  background: transparent;
+}
+
+/* Q and E buttons */
+div[data-style="Common-buttonQ Common-buttonQE"],
+div[data-style="Common-buttonE Common-buttonQE"] {
+  background: transparent;
+  border: none;
+}
+
+/* Search field */
+div[data-style=SearchInputComponentStyle-searchInput] {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #ffffff50;
+  transition: 100ms ease-in-out;
+  transition-property: border-bottom-color;
+}
+div[data-style=SearchInputComponentStyle-searchInput]:focus-within {
+  border-bottom-color: #ffffffc0;
+}
+div[data-style=SearchInputComponentStyle-searchInput] > input {
+  color: #ffffff;
+}
+div[data-style=SearchInputComponentStyle-searchInput] > input::placeholder {
+  color: #b0b0b0;
+}
+
+/* Matchmaking battle search overlay */
+div[data-style=Style-container] {
+  border-left: 3px solid #ffffffa0;
+  border-bottom: 3px solid #ffffffa0;
+  border-radius: 0px 0px 0px 5em;
+  background: #00000060;
+  backdrop-filter: blur(4px);
+  /* Left yellow line */
+  /* Content container */
+}
+div[data-style=Style-container] > img[data-style=Style-borderLeft] {
+  display: none;
+}
+div[data-style=Style-container] > div[data-style=Style-contentContainer] > div[data-style=Style-averageTimeContainer], div[data-style=Style-container] > div[data-style=Style-contentContainer] > div[data-style="Style-currentTimeContainer Style-averageTimeContainer"] {
+  margin-left: 0;
+}
+
+/* Top right buttons container (tankoins, crystals, fullscreen, exit) */
+div[data-style=UserScoreComponentStyle-blockRightPanel] > div,
+div[data-style=BreadcrumbsComponentStyle-rightButtonsContainer] > div {
+  background: transparent;
+  filter: drop-shadow(2px 3px 3px #000000);
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=UserScoreComponentStyle-blockRightPanel] > div:hover,
+div[data-style=BreadcrumbsComponentStyle-rightButtonsContainer] > div:hover {
+  background-color: #ffffff20;
+}
+
+/* Context menu */
+div[data-style=ContextMenuStyle-menu] {
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  /* Yellow stripes */
+}
+div[data-style=ContextMenuStyle-menu] div[data-style="ContextMenuStyle-decoration ContextMenuStyle-menuItemRank"] {
+  display: none;
+}
+div[data-style=ContextMenuStyle-menu] div[data-style=ContextMenuStyle-menuItem],
+div[data-style=ContextMenuStyle-menu] div[data-style="ContextMenuStyle-menuItem ContextMenuStyle-menuItemRank"] {
+  background: transparent;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=ContextMenuStyle-menu] div[data-style=ContextMenuStyle-menuItem]:hover,
+div[data-style=ContextMenuStyle-menu] div[data-style="ContextMenuStyle-menuItem ContextMenuStyle-menuItemRank"]:hover {
+  background-color: #ffffff20;
+}
+
+/* Loading container */
+div[data-style="ApplicationComponentStyle-container Common-background"] {
+  display: none;
+}
+
+/* Menu transitions */
+div[data-style=LobbyLoaderStyle-container] {
+  display: none;
+}
+div[data-style=LobbyLoaderStyle-container] > div[data-style=LobbyLoaderStyle-background1] {
+  background: #00000080;
+  backdrop-filter: blur(4px);
+}
+div[data-style=LobbyLoaderStyle-container] > div[data-style=LobbyLoaderStyle-background2] {
+  background: #000000a0;
+  backdrop-filter: blur(4px);
+  /* 'Loading...' label */
+  /* Loading progress */
+}
+
+/*# sourceMappingURL=common.css.map */

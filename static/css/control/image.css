@@ -1,0 +1,8 @@
+div.image-container {
+  display: flex;
+}
+div.image-container > img.image {
+  border-radius: 2px;
+}
+
+/*# sourceMappingURL=image.css.map */

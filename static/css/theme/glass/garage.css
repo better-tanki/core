@@ -1,0 +1,159 @@
+/* Yellow stripes behind items */
+img[data-style=GarageItemComponentStyle-pumping] {
+  display: none;
+}
+
+/* White stripes in upgrade menu */
+img[data-style=Style-blockArrows] {
+  display: none;
+}
+
+/* Yellow stripes in upgrade menu */
+div[data-style=Style-blockAnimation] {
+  display: none;
+}
+
+/* GS value block */
+div[data-style=Common-commonBlockGS] {
+  /* Yellow stripes */
+}
+div[data-style=Common-commonBlockGS] > span[data-style=Common-linesContainer] {
+  display: none;
+}
+
+/* Mounted items */
+div[data-style=MountedItemsStyle-containerBlockGarage] > div {
+  border-left: none;
+  border-right: none;
+  border-top: 3px solid #ffffff50;
+  border-bottom: none;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+  /* Selected */
+}
+div[data-style=MountedItemsStyle-containerBlockGarage] > div:not(.byVJfO):hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+div[data-style=MountedItemsStyle-containerBlockGarage] > div.byVJfO {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+
+div.garage-item {
+  border-left: none;
+  border-right: none;
+  border-top: 3px solid #ffffff50;
+  border-bottom: none;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+  /* Selected item */
+}
+div.garage-item:not(.hPzUKA):hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+div.garage-item.hPzUKA {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+div.garage-item > img {
+  display: none;
+}
+
+/* Paints */
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div {
+  /* Any */
+  /* Unselected */
+  /* Selected */
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div {
+  border-left: none;
+  border-right: none;
+  border-top: 3px solid #ffffff50;
+  border-bottom: none;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div > div[data-style=PaintsCollectionComponentStyle-equippedItemPaints] {
+  border-top-width: 3px;
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div:hover {
+  border-top-width: 3px;
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div[data-style=PaintsCollectionComponentStyle-paint] {
+  background: #00000030;
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div[data-style=PaintsCollectionComponentStyle-paint]:hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div > div[data-style="PaintsCollectionComponentStyle-paint PaintsCollectionComponentStyle-activePaint"] {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+
+div[data-style=Style-device],
+div[data-style=Style-cellSkins] > div {
+  background: transparent;
+  border: 2px solid #ffffff80;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-color;
+}
+div[data-style=Style-device]:hover,
+div[data-style=Style-cellSkins] > div:hover {
+  background: transparent;
+  border-color: #ffffffc0;
+}
+
+div[data-style=Style-skinsTable] > div {
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-color;
+}
+div[data-style=Style-skinsTable] > div.bUpBfV {
+  background: transparent;
+  border: 2px solid #ffbc09a0;
+}
+div[data-style=Style-skinsTable] > div.bUpBfV:hover {
+  border-color: #ffbc09d0;
+}
+div[data-style=Style-skinsTable] > div.ebWhMr {
+  background: transparent;
+  border: 2px solid #ffffffa0;
+}
+div[data-style=Style-skinsTable] > div.ebWhMr:hover {
+  border-color: #ffffffd0;
+}
+div[data-style=Style-skinsTable] > div.dDRcgP {
+  background: transparent;
+  border: 2px solid #ffbc0950;
+}
+div[data-style=Style-skinsTable] > div.dDRcgP:hover {
+  border-color: #ffbc0980;
+}
+div[data-style=Style-skinsTable] > div.gTVZYP {
+  background: transparent;
+  border: none;
+}
+div[data-style=Style-skinsTable] > div.lkQQUj {
+  background: transparent;
+  border: 2px solid #ffffff50;
+}
+div[data-style=Style-skinsTable] > div.lkQQUj:hover {
+  border-color: #ffffff80;
+}
+
+/* Supplies cell */
+div[data-style="Style-activeCell Style-cell"] {
+  border-radius: 4px;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style="Style-activeCell Style-cell"]:hover {
+  background-color: #00000060;
+}
+
+/*# sourceMappingURL=garage.css.map */

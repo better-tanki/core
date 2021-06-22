@@ -1,0 +1,80 @@
+@import '../../constants';
+
+div.button-group {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	&.button-group--horizontal {
+		flex-direction: row;
+
+		& > div.button {
+			&:not(:last-of-type) {
+				margin-right: 0.5em;
+			}
+		}
+	}
+
+	&.button-group--vertical {
+		flex-direction: column;
+
+		& > div.button {
+			&:not(:last-of-type) {
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+}
+
+div.button {
+	display: flex;
+
+	padding: 0.5em 0.8em;
+
+	border-radius: 2px;
+
+	font-family: 'Exo 2', sans-serif;
+
+	background-color: #ffffff20;
+
+	user-select: none;
+
+	cursor: pointer;
+
+	transition-property: color;
+	transition: 50ms ease-in-out;
+
+	&.button--filled {
+		background-color: get-color('primary');
+		color: get-color('primary-text');
+
+		&.button--hover {
+			background-color: adjust-color($color: get-color('primary'), $lightness: 5%);
+		}
+	
+		&:not(.button--hover) {
+			
+		}
+	}
+
+	&.button--borderless {
+		background-color: transparent;
+
+		&.button--hover {
+			background-color: #ffffff30;
+		}
+	
+		&:not(.button--hover) {
+			
+		}
+	}
+
+	&.button--hover {
+		background-color: #ffffff30;
+	}
+
+	&:not(.button--hover) {
+		
+	}
+}

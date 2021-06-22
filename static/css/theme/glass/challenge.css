@@ -1,0 +1,94 @@
+/* Challenge menu */
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] {
+  /* Stars progress container */
+  /* Time left container */
+  /* Main container (rewards, levels, tiers) */
+  /* Purchase battle pass container */
+  /* Tiers */
+  /* Rewards */
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] {
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] progress[data-style=ChallengeProgressBarComponentStyle-progressBar] {
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] progress[data-style=ChallengeProgressBarComponentStyle-progressBar]::-webkit-progress-bar, div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] progress[data-style=ChallengeProgressBarComponentStyle-progressBar]::-webkit-progress-value {
+  border: none;
+  border-radius: 8px;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] progress[data-style=ChallengeProgressBarComponentStyle-progressBar]::-webkit-progress-bar {
+  background-color: #00000030;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeInfoComponentStyle-blockStarsCount] progress[data-style=ChallengeProgressBarComponentStyle-progressBar]::-webkit-progress-value {
+  background: #ffffffe0;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengeTimerComponentStyle-blockTimer] {
+  border: none;
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=QuestsChallengesComponentStyle-containerTiers] {
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ChallengePurchaseComponentStyle-blockPurchase] {
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=QuestsChallengesComponentStyle-blockTiers] {
+  /* Header */
+  /* Any */
+  /* Common */
+  /* Premium */
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=QuestsChallengesComponentStyle-blockTiers] > div[data-style=QuestsChallengesComponentStyle-descriptionTiers] {
+  border: none;
+  background: transparent;
+  /* Text */
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=QuestsChallengesComponentStyle-blockTiers] > div[data-style="QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"], div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=QuestsChallengesComponentStyle-blockTiers] > div[data-style="QuestsChallengesComponentStyle-premiumTier QuestsChallengesComponentStyle-tiers QuestsChallengesComponentStyle-descriptionTiers"] {
+  border: none;
+  background: transparent;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] {
+  /* Level container */
+  /* Level rewards */
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-blockTier] div[data-style=TierHeaderComponentStyle-descriptionTier] {
+  border: none;
+  background: transparent;
+  flex-direction: column;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-blockTier] div[data-style=TierHeaderComponentStyle-descriptionTier] > div[data-style=TierHeaderComponentStyle-tierActive] {
+  border: none;
+  height: calc(100% - 3px);
+  top: 0;
+  border-top: 3px solid #ffffffe0;
+  animation: 1s ease 0s infinite alternate none running opacity-flash;
+}
+@keyframes opacity-flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-commonBlock] {
+  /** Common tier **/
+  /* Any */
+  /* Completed */
+  /* Unavailable */
+  /** Premium tier **/
+  /* Any */
+  /* Completed */
+  /* Unavilable */
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-commonBlock] > div[data-style=CommonTierItemComponentStyle-tier], div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-commonBlock] > div[data-style="CommonTierItemComponentStyle-tierOpacity CommonTierItemComponentStyle-tier"] {
+  border-top: 3px solid #ffffffe0;
+  background: #00000050;
+}
+div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-commonBlock] > div[data-style=PremiumTierItemComponentStyle-tierPremium], div[data-style=QuestsChallengesComponentStyle-containerParametrsChallenge] div[data-style=ScrollBarStyle-itemsContainer] div[data-style=ChallengeTierComponentStyle-commonBlock] > div[data-style="PremiumTierItemComponentStyle-tierPremiumOpacity PremiumTierItemComponentStyle-tierPremium"] {
+  border-top: 3px solid #fbc02de0;
+  background: #00000050;
+}
+
+/*# sourceMappingURL=challenge.css.map */

@@ -1,0 +1,320 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Root container */
+div#root[class="GlobalStyle-wrapper"] {
+}
+
+/* Common container */
+div[data-style="Common-container"] {
+	background: #202020;
+
+	/* Header container */
+	& > div[data-style="BreadcrumbsComponentStyle-headerContainer Common-backgroundColor"] {
+		@include no-background();
+	}
+
+	/* Common content container */
+	& > div[data-style="Common-content"] {
+		@include no-background();
+	}
+
+	& > div[data-style="BreadcrumbsComponentStyle-rightButtonsContainer"] {
+		&::before {
+			@include hide();
+		}
+	}
+}
+
+/* Tips */
+div[data-style="InfoBlockStyle-blockInfo"] {
+	align-items: center;
+
+	/* Left line */
+	& > div[data-style="InfoBlockStyle-leftLine"] {
+		@include no-background();
+		@include no-border();
+	}
+
+	/* Right line */
+	& > div[data-style="InfoBlockStyle-string"] {
+		@include no-background();
+
+		div[data-style="InfoBlockStyle-enter Font-bold Font-normal"] {
+			margin: 0;
+
+			@include no-background();
+			@include no-border();
+		}
+	}
+}
+
+/* Tooltips */
+div[data-style="TooltipStyle-tooltip"] {
+	border-radius: 4px;
+
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	/* Tooltip orange corners */
+	& > div[data-style="TooltipStyle-leftTopCorner TooltipStyle-corner"],
+	& > div[data-style="TooltipStyle-rightTopCorner TooltipStyle-corner"],
+	& > div[data-style="TooltipStyle-leftBottomCorner TooltipStyle-corner"],
+	& > div[data-style="TooltipStyle-rightBottomCorner TooltipStyle-corner"] {
+		@include hide();
+	}
+}
+
+/* Notifications */
+div[data-style="NotificationViewStyle-commonBlockNotification"] {
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	/* Header */
+	& > div[data-style="NotificationViewStyle-headlineNotification"] {
+		@include no-background();
+
+		& > img:last-child {
+			@include hide();
+		}
+	}
+
+	& > div[data-style="NotificationViewStyle-blockButtonAndTimer"] {
+		@include no-background();
+	}
+
+	progress[data-style="NotificationViewStyle-progressNotification"] {
+		@include no-background();
+
+		&::-webkit-progress-bar {
+			background-color: #00000030;
+		}
+
+		&::-webkit-progress-value {
+			background: #ffffffc0;
+		}
+	}
+}
+
+div#modal-root {
+	& > div.modal.hover {
+		background: #00000070;
+	}
+}
+
+/* Modals */
+div[data-style="DialogContainerComponentStyle-container"],
+div[data-style="ChooseCountryComponentStyle-container"],
+div[data-style="SuccessfulPurchaseComponentStyle-container"] {
+	background: #00000050;
+
+	backdrop-filter: blur(4px);
+
+	/* Modal header */
+	& > div[data-style="DialogContainerComponentStyle-header"],
+	& > div[data-style="ChooseCountryComponentStyle-headline"] {
+		@include no-background();
+
+		margin-top: 1em;
+	}
+
+	/* Top right lines */
+	img[data-style="DialogContainerComponentStyle-imgLine"] {
+		@include hide();
+	}
+
+	/* Close button */
+	img[data-style="DialogContainerComponentStyle-imgClose"] {
+		margin-right: 1.5em;
+
+		filter: brightness(0.75);
+
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+
+		&:hover {
+			filter: brightness(1);
+		}
+	}
+}
+
+/* Purchase modal */
+div[data-style="SuccessfulPurchaseComponentStyle-container"] {
+	/* Modal header */
+	& > div:first-child {
+		@include no-background();
+
+		/* Top right lines */
+		& > div:nth-child(3) {
+			@include hide();
+		}
+
+		/* Close button */
+		& > img:last-child {
+			margin-right: 1.5em;
+	
+			filter: brightness(0.75);
+	
+			transition: 100ms ease-in-out;
+			transition-property: background-color;
+	
+			&:hover {
+				filter: brightness(1);
+			}
+		}
+	}
+}
+
+/* Rankup modal */
+div[data-style="RankupComponentStyle-wrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] {
+	border-top: 3px solid #ffffff50;
+	border-bottom: 3px solid #ffffff50;
+
+	background: #00000050;
+
+	backdrop-filter: blur(6px);
+
+	/* Modal header */
+	& > div[data-style="RankupComponentStyle-titleWrapper RankupComponentStyle-wrapperWidth RankupComponentStyle-flex"] {
+		@include no-background();
+
+		div[data-style="RankupComponentStyle-titleLineEmptyArea RankupComponentStyle-flex"] {
+			@include no-background();
+		}
+
+		/* Yellow lines */
+		div[data-style="RankupComponentStyle-titleLineYellowLines"] {
+			@include no-background();
+		}
+	}
+}
+
+/* Q and E buttons */
+div[data-style="Common-buttonQ Common-buttonQE"],
+div[data-style="Common-buttonE Common-buttonQE"] {
+	@include no-background();
+	@include no-border();
+}
+
+/* Search field */
+div[data-style="SearchInputComponentStyle-searchInput"] {
+	@include no-background();
+	@include no-border();
+
+	border-bottom: 3px solid #ffffff50;
+
+	transition: 100ms ease-in-out;
+	transition-property: border-bottom-color;
+
+	&:focus-within {
+		border-bottom-color: #ffffffc0;
+	}
+
+	& > input {
+		color: #ffffff;
+
+		&::placeholder {
+			color: #b0b0b0;
+		}
+	}
+}
+
+/* Matchmaking battle search overlay */
+div[data-style="Style-container"] {
+	border-left: 3px solid #ffffffa0;
+	border-bottom: 3px solid #ffffffa0;
+	
+	border-radius: 0px 0px 0px 5em;
+
+	background: #00000060;
+
+	backdrop-filter: blur(4px);
+
+	/* Left yellow line */
+	& > img[data-style="Style-borderLeft"] {
+		@include hide();
+	}
+
+	/* Content container */
+	& > div[data-style="Style-contentContainer"] {
+		& > div[data-style="Style-averageTimeContainer"],
+		& > div[data-style="Style-currentTimeContainer Style-averageTimeContainer"] {
+			margin-left: 0;
+		}
+	}
+}
+
+/* Top right buttons container (tankoins, crystals, fullscreen, exit) */
+div[data-style="UserScoreComponentStyle-blockRightPanel"],
+div[data-style="BreadcrumbsComponentStyle-rightButtonsContainer"] {
+	& > div {
+		@include no-background();
+
+		filter: drop-shadow(2px 3px 3px #000000);
+
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+	
+		&:hover {
+			background-color: #ffffff20;
+		}
+	}
+}
+
+/* Context menu */
+div[data-style="ContextMenuStyle-menu"] {
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	/* Yellow stripes */
+	div[data-style="ContextMenuStyle-decoration ContextMenuStyle-menuItemRank"] {
+		@include hide();
+	}
+
+	div[data-style="ContextMenuStyle-menuItem"],
+	div[data-style="ContextMenuStyle-menuItem ContextMenuStyle-menuItemRank"] {
+		@include no-background();
+		
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+	
+		&:hover {
+			background-color: #ffffff20;
+		}
+	}
+}
+
+/* Loading container */
+div[data-style="ApplicationComponentStyle-container Common-background"] {
+	@include hide(); // Custom overlay
+}
+
+/* Menu transitions */
+div[data-style="LobbyLoaderStyle-container"] {
+	@include hide(); // Custom overlay
+
+	& > div[data-style="LobbyLoaderStyle-background1"] {
+		background: #00000080;
+
+		backdrop-filter: blur(4px);
+	}
+
+	& > div[data-style="LobbyLoaderStyle-background2"] {
+		background: #000000a0;
+		
+		backdrop-filter: blur(4px);
+
+		/* 'Loading...' label */
+		& > span[data-style="LobbyLoaderStyle-label Font-bold Font-normal"] {
+
+		}
+
+		/* Loading progress */
+		& > div[data-style="LobbyLoaderStyle-loaderProgress"] {
+
+		}
+	}
+}

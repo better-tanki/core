@@ -1,0 +1,39 @@
+div.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 8em;
+  user-select: none;
+}
+div.dropdown-wrapper > div.dropdown {
+  display: flex;
+  height: 2em;
+  border-radius: 6px;
+  transition: 75ms ease-in-out;
+  transition-property: width, box-shadow, background-color;
+}
+div.dropdown-wrapper > div.dropdown--closed {
+  box-shadow: inset 0px 0px 0px 3px #039be5;
+}
+div.dropdown-wrapper > div.dropdown--opened {
+  background-color: #039be5;
+}
+div.dropdown-wrapper > div.dropdown-items {
+  display: flex;
+  flex-direction: column;
+}
+div.dropdown-wrapper > div.dropdown-items > div.dropdown-item {
+  display: flex;
+  width: inherit;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: 75ms ease-in-out;
+  transition-property: width, box-shadow, background-color;
+}
+div.dropdown-wrapper > div.dropdown-items > div.dropdown-item--hover {
+  background-color: #039be5;
+}
+div.dropdown-wrapper > div.dropdown-items > div.dropdown-item--selected {
+  background-color: #039be5;
+}
+
+/*# sourceMappingURL=dropdown.css.map */

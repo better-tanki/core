@@ -1,0 +1,44 @@
+/* Mode filter */
+div[data-style=BattleTableStyle-containerButtonsPick] {
+  /* Any */
+  /* Selected */
+  /* Unselected */
+}
+div[data-style=BattleTableStyle-containerButtonsPick] > div[data-style="BattleTableStyle-blockAllButton BattleTableStyle-whiteTextButton"], div[data-style=BattleTableStyle-containerButtonsPick] > div[data-style="BattleTableStyle-blockAllButton BattleTableStyle-whiteTextButton BattleTableStyle-opacityButton"] {
+  border: none;
+  border-top: 3px solid #ffffff50;
+  background: #00000030;
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-top-color;
+}
+div[data-style=BattleTableStyle-containerButtonsPick] > div[data-style="BattleTableStyle-blockAllButton BattleTableStyle-whiteTextButton"] {
+  border-top-color: #ffffffc0;
+  background: #00000080;
+}
+div[data-style=BattleTableStyle-containerButtonsPick] > div[data-style="BattleTableStyle-blockAllButton BattleTableStyle-whiteTextButton BattleTableStyle-opacityButton"]:hover {
+  border-top-color: #ffffff80;
+  background: #00000060;
+}
+
+/* Map name / battle name switch */
+div[data-style=BattleTableStyle-commonBlockForButton] {
+  /* Any */
+  /* Selected */
+  /* Unselected */
+}
+div[data-style=BattleTableStyle-commonBlockForButton] > div {
+  background: transparent;
+  border: none;
+}
+/* Battle list */
+table[data-style=TableComponentStyle-table] > tbody > tr {
+  margin-bottom: 3px;
+  background: #ffffff15;
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+table[data-style=TableComponentStyle-table] > tbody > tr:hover {
+  background: #ffffff30;
+}
+
+/*# sourceMappingURL=battle-list.css.map */

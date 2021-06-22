@@ -1,0 +1,95 @@
+div#bt-modal__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000bb;
+  color: #fafafa;
+  backdrop-filter: blur(2px);
+  user-select: none;
+  outline: none;
+  z-index: 5000;
+}
+div#bt-modal__container div.bt-modal {
+  display: flex;
+  flex-direction: column;
+  width: 24rem;
+  padding: 1rem 1.3rem;
+  background-color: #ffffff20;
+  word-break: break-all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color;
+  animation: fadein 300ms;
+  backdrop-filter: blur(2px);
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+div#bt-modal__container div.bt-modal div.bt-modal__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__header img.bt-modal__icon {
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__header div.bt-modal__title {
+  font-size: 1.3rem;
+  font-family: "Exo 2", sans-serif;
+  color: #ffffff;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__content div.bt-modal__message {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button {
+  height: 2rem;
+  width: 100%;
+  margin: 0 0.25rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  color: #fafafa;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-ok {
+  background-color: #0d47a1;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-ok:hover {
+  background-color: #1565c0;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-yes {
+  background-color: #1b5e20;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-yes:hover {
+  background-color: #2e7d32;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-no {
+  background-color: #b71c1c;
+}
+div#bt-modal__container div.bt-modal div.bt-modal__buttons button.bt-modal__button-no:hover {
+  background-color: #c62828;
+}
+
+/*# sourceMappingURL=modal.css.map */

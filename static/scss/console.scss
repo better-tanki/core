@@ -1,0 +1,158 @@
+div.bt-console-container {
+	position: fixed;
+	display: flex;
+
+	flex-direction: column;
+
+	width: 36em;
+	height: 36em;
+
+	right: 0;
+	bottom: 0;
+
+	margin-right: 1em;
+	margin-bottom: 1em;
+
+	font-family: 'Source Code Pro', monospace;
+
+	background: #000000e0;
+
+	box-shadow: 1px 1px 2px 1px #00000080;
+
+	z-index: 20;
+
+	user-select: none;
+
+	&--fade-in {
+		animation: 200ms ease-in fade-in;
+	}
+
+	&--fade-out {
+		animation: 200ms ease-out fade-out;
+	}
+
+	div.bt-console-header {
+		display: flex;
+
+		justify-content: space-between;
+		align-items: center;
+
+		span.bt-console-title {
+			font-weight: 600;
+			font-size: 1.5em;
+		}
+
+		padding: 0.8em 1.5em;
+	}
+
+	div.bt-console {
+		display: flex;
+
+		flex-direction: column;
+
+		height: 100%;
+
+		div.bt-console-messages-wrapper {
+			display: flex;
+
+			flex-direction: column;
+			flex-grow: 1;
+
+			height: 0;
+
+			overflow-y: scroll;
+
+			background: #ffffff20;
+
+			div.bt-console-messages {
+				display: flex;
+		
+				flex-direction: column;
+				flex-grow: 1;
+
+				& > div.bt-console-message-wrapper {
+					padding: 0.1em 0.8em;
+
+					& > div.bt-console-message {
+						font-size: 0.8em;
+						font-weight: 400;
+
+						line-height: 1.7em;
+
+						word-break: break-all;
+
+						span.bt-console-markup {
+							&__inline-code {
+								padding: 0.2em 0.4em;
+
+								border-radius: 2px;
+
+								background: #00000080;
+							}
+						}
+					}
+				}
+			}
+
+			&::-webkit-scrollbar {
+				display: initial;
+
+				width: 6px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				display: initial;
+
+				border-radius: 8px;
+
+				background: #ffffffe0;
+			}
+
+			&::-webkit-scrollbar-track {
+				display: initial;
+
+				background: #00000050;
+			}
+		}
+
+		input.bt-console-input {
+			padding: 0.8em 1em;
+
+			border: none;
+			border-bottom: 3px solid #ffffff50;
+
+			font-size: 1.1em;
+			font-weight: 400;
+		
+			// background: transparent;
+			background: #00000050;
+			color: #fafafa;
+
+			transition: border-bottom-color 100ms;
+
+			&:focus {
+				border-bottom-color: #ffffffe0;
+			}
+		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

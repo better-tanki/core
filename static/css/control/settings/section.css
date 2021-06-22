@@ -1,0 +1,25 @@
+div.settings-section-wrapper {
+  user-select: none;
+}
+div.settings-section-wrapper > div.settings-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5em;
+  border-left: 3px solid #ffffff50;
+}
+div.settings-section-wrapper > div.settings-section > span.section-title {
+  margin-bottom: 0.4em;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  font-size: 1.8em;
+  color: #ffffff;
+}
+div.settings-section-wrapper > div.settings-section > div.section-content {
+  display: flex;
+  flex-direction: column;
+}
+div.settings-section-wrapper > div.settings-section > div.section-content > div {
+  margin: 0.25em 0;
+}
+
+/*# sourceMappingURL=section.css.map */

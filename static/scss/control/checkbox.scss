@@ -1,0 +1,56 @@
+div.bt-test {
+	width: 48em;
+
+	margin: 2em;
+
+	display: flex;
+
+	flex-direction: column;
+
+	div.section-content > div {
+		display: flex;
+
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+div.checkbox-wrapper {
+	user-select: none;
+
+	& > div.checkbox {
+		display: flex;
+
+		width: 2em;
+		height: 1em;
+
+		border-radius: 16px;
+
+		transition: 75ms ease-in-out;
+		transition-property: width, box-shadow, background-color;
+
+		cursor: pointer;
+
+		&--hover {
+			width: 3.25em;
+			
+			// box-shadow: 0 0 3px 0px aqua;
+
+			&.checkbox--unchecked {
+				box-shadow: inset 0px 0px 0px 3px #29b6f6;
+			}
+		}
+
+		&--mouse-out {
+			
+		}
+
+		&--unchecked {
+			box-shadow: inset 0px 0px 0px 3px #039be5;
+		}
+
+		&--checked {
+			background-color: #4fc3f7;
+		}
+	}
+}

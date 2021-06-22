@@ -1,0 +1,25 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Battle mdoe select menu */
+div[data-style="BattlePickComponentStyle-blockCenter"] {
+	/* Battle mode list item */
+	div[data-style="BattlePickComponentStyle-blockCard"],
+	div[data-style="BattlePickComponentStyle-quickBattleCard BattlePickComponentStyle-blockCard"] {
+		@include no-border();
+
+		border-bottom: 3px solid #ffffff50;
+		border-radius: 2px 2px 0 0;
+
+		transition: 250ms ease-in-out;
+		transition-property: border-bottom-color;
+
+		&:hover {
+			border-bottom-color: #ffffffc0;
+		}
+
+		& > img {
+			@include hide();
+		}
+	}
+}

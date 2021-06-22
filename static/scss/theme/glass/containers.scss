@@ -1,0 +1,120 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Containers menu */
+div[data-style="ContainersStyle-lootBoxContainers"] {
+	/* Available containers */
+	div[data-style="ScrollBarStyle-itemsContainer"] {
+		& > div {
+			border-left: none;
+			border-right: none;
+			border-top: 3px solid #ffffff50;
+			border-bottom: none;
+
+			background: #00000030;
+		
+			transition: 100ms ease-in-out;
+			transition-property: background-color, border-top-color;
+			
+			&:not(.ciyQLy):hover {
+				border-top-color: #ffffff80;
+		
+				background: #00000060;
+			}
+
+			/* Selected */
+			&.ciyQLy {
+				border-top-color: #ffffffc0;
+		
+				background: #00000080;
+			}
+		}
+	}
+
+	/* Rewards */
+	div[data-style="Style-scrollBlockReward"],
+	div[data-style="ContainersStyle-scrollBlockReward"] > div {
+		/* Reward item */
+		& > div {
+			background: #00000030;
+		}
+	}
+
+	/* Reward filters */
+	div[data-style="Style-containerForPossibleRewards"] {
+		/* Reward filter */
+		& > div > div {
+			border-left: 3px solid #ffffff50;
+
+			background: #00000030;
+		
+			transition: 100ms ease-in-out;
+			transition-property: background-color, border-left-color;
+			
+			&:not(.cNlUtX):hover {
+				border-left-color: #ffffff80;
+
+				background: #00000060;
+			}
+
+			/* Selected */
+			&.cNlUtX {
+				border-left-color: #ffffffc0;
+				
+				background: #00000080;
+			}
+		}
+	}
+}
+
+/* Rewards menu */
+div[data-style="Style-containerCenterLootBox"] {
+	/* Rewards */
+	div[data-style="Style-scrollBlockReward"] {
+		/* Reward item */
+		& > div {
+			border-top: 3px solid #ffffff50;
+
+			background: #00000030;
+		
+			transition: 100ms ease-in-out;
+			transition-property: background-color, border-top-color;
+			
+			&:not(.huUaMh):hover {
+				border-top-color: #ffffff80;
+	
+				background: #00000060;
+			}
+	
+			/* Selected */
+			&.huUaMh {
+				border-top-color: #ffffffc0;
+				
+				background: #00000080;
+			}
+		}
+	}
+
+	/* Item information */
+	& > div:last-child {
+		border-top-width: 3px;
+
+		background: #00000030;
+
+		/* item title container (header) */
+		& > div[data-style="Style-rewardNameContainer"] {
+			background: #00000030;
+		}
+
+		/* Item corners (rarity) */
+		img[data-style="Style-rewardCategoryIcon Style-categoryIcon"],
+		img[data-style="Style-rotateAngleContainers Style-categoryIcon"] {
+			@include hide();
+		}
+
+		/* Bottom white stripes */
+		img[data-style="Style-marginImageJewelery"] {
+			@include hide();
+		}
+	}
+}

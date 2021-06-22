@@ -1,0 +1,20 @@
+div.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25em;
+  border-radius: 2px;
+  background-color: #000000aa;
+}
+div.list > div.list-item {
+  padding: 0.5em;
+  border-radius: 2px;
+  background-color: #00000000;
+}
+div.list > div.list-item:not(:last-of-type) {
+  margin-bottom: 0.25em;
+}
+div.list > div.list-item.list-item--hover {
+  background-color: #ffffff20;
+}
+
+/*# sourceMappingURL=list.css.map */

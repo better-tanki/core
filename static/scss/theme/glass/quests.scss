@@ -1,0 +1,237 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Quests window container */
+div[data-style="QuestComponentStyle-content"] {
+	@include no-background();
+}
+
+/* Special quest item */
+div[data-style="MainQuestComponentStyle-container"],
+div[data-style="MainQuestComponentStyle-container MainQuestComponentStyle-lockedContainerBg"] {
+	@include no-border();
+
+	background: #00000030;
+
+	border-left: 3px solid;
+		
+	&.bt-quest--play {
+		border-left-color: #03a9f4;
+	}
+		
+	&.bt-quest--unlock {
+		border-left-color: #ff9800;
+	}
+	
+	&.bt-quest--claim {
+		border-left-color: #4caf50;
+	}
+	
+	&.bt-quest--empty {
+		border-left-color: #ffffff;
+	}
+
+	div[data-style="MainQuestComponentStyle-descriptionContainer2"] {
+		@include hide();
+	}
+
+	/* Rewards */
+	div[data-style="MainQuestComponentStyle-rewardsContainer"] {
+		/* Reward */
+		& > div[data-style="QuestRewardComponentStyle-reward"] {
+			background: #00000030;
+		}
+	}
+
+	progress[data-style="MainQuestComponentStyle-progress"] {
+		@include no-background();
+			
+		&::-webkit-progress-bar,
+		&::-webkit-progress-value {
+			@include no-border();
+
+			border-radius: 8px;
+		}
+
+		&::-webkit-progress-bar {
+			background-color: #00000030;
+		}
+
+		&::-webkit-progress-value {
+			background: #ffffffe0;
+		}
+	}
+
+	/* Complete / unblock / claim button */
+	div[data-style="MainQuestComponentStyle-buttonContainer"] {
+		@include no-background();
+		
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+
+		// border-right: 3px solid;
+		
+		&.bt-quest-button--play {
+			// border-right-color: #03a9f4;
+
+			&:hover {
+				background: #03a9f4;
+			}
+
+			& > span {
+				color: #03a9f4;
+			}
+		}
+			
+		&.bt-quest-button--unlock {
+			// border-right-color: #ff9800;
+
+			&:hover {
+				background: #ff9800;
+			}
+
+			& > span {
+				color: #ff9800;
+			}
+		}
+		
+		&.bt-quest-button--claim {
+			// border-right-color: #4caf50;
+
+			&:hover {
+				background: #4caf50;
+			}
+
+			& > span {
+				color: #4caf50;
+			}
+
+			& > div > span {
+				text-shadow: 1px 1px 3px #00000050;
+			}
+		}
+
+		& > span {
+			text-shadow: 1px 1px 3px #00000050;
+
+			transition: 100ms ease-in-out;
+			transition-property: color;
+		}
+
+		&:hover {
+			& > span {
+				color: #ffffff;
+			}
+		}
+	}
+
+	/* Completion progress */
+	progress[data-style="MainQuestComponentStyle-progress"] {
+		width: initial; // Fix
+		
+		margin-left: 1.438em; // Match with description
+	}
+}
+
+/* Daily / weekly quests */
+div[data-style="QuestsComponentStyle-questBlock"] {
+	/* Quest item */
+	& > div[data-style="QuestBlockComponentStyle-dailyMission"],
+	& > div[data-style="QuestBlockComponentStyle-dailyMission QuestBlockComponentStyle-dailyMissionFinished"] {
+		@include no-border();
+
+		background: #00000030;
+
+		div[data-style="QuestDescriptionComponentStyled-aboutMission"] {
+			& > img:first-child {
+				@include hide();
+			}
+		}
+
+		/* Rewards */
+		div[data-style="QuestRewardsComponentStyle-stringRewards"] {
+			/* Reward */
+			& > div[data-style="QuestRewardComponentStyle-reward"] {
+				background: #00000030;
+			}
+		}
+
+		/* Button */
+		& > div:last-child {
+			@include no-background();
+
+			transition: 100ms ease-in-out;
+			transition-property: background-color;
+			
+			border-bottom: 3px solid;
+
+			&.bt-quest-button--change {
+				border-bottom-color: #f44336;
+
+				&:hover {
+					background: #f44336;
+				}
+
+				& > span {
+					color: #f44336;
+				}
+			}
+			
+			&.bt-quest-button--play {
+				border-bottom-color: #03a9f4;
+
+				&:hover {
+					background: #03a9f4;
+				}
+
+				& > span {
+					color: #03a9f4;
+				}
+			}
+			
+			&.bt-quest-button--claim {
+				border-bottom-color: #4caf50;
+
+				&:hover {
+					background: #4caf50;
+
+					& > div > span {
+						color: #ffffff;
+					}
+				}
+
+				& > div > span {
+					color: #4caf50;
+
+					transition: 100ms ease-in-out;
+					transition-property: color;
+				}
+			}
+
+			& > span {
+				text-shadow: 1px 1px 3px #00000050;
+
+				transition: 100ms ease-in-out;
+				transition-property: color;
+			}
+			
+			&:hover {
+				& > span {
+					color: #ffffff;
+				}
+			}
+			
+			/* Claim reward button */
+			& > div[data-style="DailyQuestComponentStyle-claimReward"] {
+				@include no-background();
+
+				transition: 100ms ease-in-out;
+				transition-property: background-color;	
+				
+				&:hover {
+					@include no-background();
+				}
+			}
+		}
+	}
+}

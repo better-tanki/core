@@ -1,0 +1,47 @@
+div.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.button-group.button-group--horizontal {
+  flex-direction: row;
+}
+div.button-group.button-group--horizontal > div.button:not(:last-of-type) {
+  margin-right: 0.5em;
+}
+div.button-group.button-group--vertical {
+  flex-direction: column;
+}
+div.button-group.button-group--vertical > div.button:not(:last-of-type) {
+  margin-bottom: 0.5em;
+}
+
+div.button {
+  display: flex;
+  padding: 0.5em 0.8em;
+  border-radius: 2px;
+  font-family: "Exo 2", sans-serif;
+  background-color: #ffffff20;
+  user-select: none;
+  cursor: pointer;
+  transition-property: color;
+  transition: 50ms ease-in-out;
+}
+div.button.button--filled {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+div.button.button--filled.button--hover {
+  background-color: #39a1f4;
+}
+div.button.button--borderless {
+  background-color: transparent;
+}
+div.button.button--borderless.button--hover {
+  background-color: #ffffff30;
+}
+div.button.button--hover {
+  background-color: #ffffff30;
+}
+
+/*# sourceMappingURL=button.css.map */

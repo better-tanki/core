@@ -1,0 +1,204 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Yellow stripes behind items */
+img[data-style="GarageItemComponentStyle-pumping"] {
+	@include hide();
+}
+
+/* White stripes in upgrade menu */
+img[data-style="Style-blockArrows"] {
+	@include hide();
+}
+
+/* Yellow stripes in upgrade menu */
+div[data-style="Style-blockAnimation"] {
+	@include hide();
+}
+
+/* GS value block */
+div[data-style="Common-commonBlockGS"] {
+	/* Yellow stripes */
+	& > span[data-style="Common-linesContainer"] {
+		@include hide();
+	}
+}
+
+/* Mounted items */
+div[data-style="MountedItemsStyle-containerBlockGarage"] {
+	& > div {
+		border-left: none;
+		border-right: none;
+		border-top: 3px solid #ffffff50;
+		border-bottom: none;
+
+		background: #00000030;
+	
+		transition: 100ms ease-in-out;
+		transition-property: background-color, border-top-color;
+		
+		&:not(.byVJfO):hover {
+			border-top-color: #ffffff80;
+	
+			background: #00000060;
+		}
+
+		/* Selected */
+		&.byVJfO {
+			border-top-color: #ffffffc0;
+	
+			background: #00000080;
+		}
+	}
+}
+
+#{$garageItem} {
+	border-left: none;
+	border-right: none;
+	border-top: 3px solid #ffffff50;
+	border-bottom: none;
+
+	background: #00000030;
+
+	transition: 100ms ease-in-out;
+	transition-property: background-color, border-top-color;
+
+	&:not(.hPzUKA):hover {
+		border-top-color: #ffffff80;
+
+		background: #00000060;
+	}
+
+	/* Selected item */
+	&.hPzUKA {
+		border-top-color: #ffffffc0;
+
+		background: #00000080;
+	}
+	
+	& > img {
+		@include hide();
+	}
+}
+
+/* Paints */
+div[data-style="VerticalScrollStyle-innerContainerStyle PaintsCollectionComponentStyle-regularPaint"] > div {
+	/* Any */
+	& > div {
+		border-left: none;
+		border-right: none;
+		border-top: 3px solid #ffffff50;
+		border-bottom: none;
+	
+		transition: 100ms ease-in-out;
+		transition-property: background-color, border-top-color;
+
+		& > div[data-style="PaintsCollectionComponentStyle-equippedItemPaints"] {
+			border-top-width: 3px;
+		}
+
+		&:hover {
+			border-top-width: 3px; // Fix
+		}
+	}
+
+	/* Unselected */
+	& > div[data-style="PaintsCollectionComponentStyle-paint"] {
+		background: #00000030;
+
+		&:hover {	
+			border-top-color: #ffffff80;
+
+			background: #00000060;
+		}
+	}
+
+	/* Selected */
+	& > div[data-style="PaintsCollectionComponentStyle-paint PaintsCollectionComponentStyle-activePaint"] {
+		border-top-color: #ffffffc0;
+
+		background: #00000080;
+	}
+}
+
+div[data-style="Style-device"],
+div[data-style="Style-cellSkins"] > div {
+	@include no-background();
+
+	border: 2px solid #ffffff80;
+
+	transition: 100ms ease-in-out;
+	transition-property: background-color, border-color;
+
+	&:hover {
+		@include no-background();
+
+		border-color: #ffffffc0;
+	}
+}
+
+div[data-style="Style-skinsTable"] {
+	& > div {
+		transition: 100ms ease-in-out;
+		transition-property: background-color, border-color;
+	}
+
+	& > #{$garageAlternationItemCurrentSelected} {
+		@include no-background();
+
+		border: 2px solid #ffbc09a0;
+
+		&:hover {
+			border-color: #ffbc09d0;
+		}
+	}
+
+	& > #{$garageAlternationItemAvailable} {
+		@include no-background();
+
+		border: 2px solid #ffffffa0;
+
+		&:hover {
+			border-color: #ffffffd0;
+		}
+	}
+
+	& > #{$garageAlternationItemCurrent} {
+		@include no-background();
+
+		border: 2px solid #ffbc0950;
+
+		&:hover {
+			border-color: #ffbc0980;
+		}
+	}
+
+	& > #{$garageAlternationItemEmpty} {
+		@include no-background();
+		@include no-border();
+	}
+
+	& > #{$garageAlternationItem} {
+		@include no-background();
+
+		border: 2px solid #ffffff50;
+
+		&:hover {
+			border-color: #ffffff80;
+		}
+	}
+}
+
+/* Supplies cell */
+div[data-style="Style-activeCell Style-cell"] {
+	border-radius: 4px;
+
+	background: #00000030;
+		
+	transition: 100ms ease-in-out;
+	transition-property: background-color;
+
+	&:hover {
+		background-color: #00000060;
+	}
+}

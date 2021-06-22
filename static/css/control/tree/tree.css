@@ -1,0 +1,49 @@
+div.tree {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25em;
+  border-radius: 2px;
+  font-family: "Exo 2", sans-serif;
+  background-color: #000000aa;
+  user-select: none;
+}
+div.tree div.tree-node {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  background-color: #00000000;
+}
+div.tree div.tree-node > div.tree-node-header {
+  display: flex;
+  align-items: center;
+  padding: 0.25em 0.25em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition: 75ms ease-in-out;
+}
+div.tree div.tree-node > div.tree-node-header.tree-node-header--hover {
+  background-color: #ffffff20;
+}
+div.tree div.tree-node.tree-node--root {
+  margin-left: 0;
+}
+div.tree div.tree-node:not(.tree-node--root) > div.tree-node-header {
+  margin-left: 1em;
+}
+div.tree div.tree-node.tree-node--has-children > div.tree-node-header {
+  margin-left: 0em;
+}
+div.tree div.tree-node:not(.tree-node--has-children) > div.tree-node-header {
+  padding: 0.25em 1.75em;
+  margin-left: 0;
+}
+div.tree div.tree-node > div.tree-node-children {
+  display: flex;
+  flex-direction: column;
+}
+div.tree div.tree-node:not(:last-of-type) {
+  margin-bottom: 0.25em;
+}
+
+/*# sourceMappingURL=tree.css.map */

@@ -1,0 +1,47 @@
+div[data-style=EntranceComponentStyle-ContainerForm] {
+  flex-direction: row;
+}
+
+div.btp-ma-container {
+  display: flex;
+  flex-direction: column;
+  width: 32em;
+  height: 100%;
+  background-color: #00000040;
+}
+div.btp-ma-container div.btp-ma-account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  background-color: #ffffff05;
+  transition: background-color 100ms;
+  cursor: pointer;
+}
+div.btp-ma-container div.btp-ma-account:hover {
+  background-color: #ffffff15;
+}
+div.btp-ma-container div.btp-ma-account:hover span.btp-ma-edit {
+  visibility: visible;
+}
+div.btp-ma-container div.btp-ma-account span.btp-ma-username {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+}
+div.btp-ma-container div.btp-ma-account span.btp-ma-password {
+  font-family: "Exo 2", sans-serif;
+}
+div.btp-ma-container div.btp-ma-account span.btp-ma-password-encrypted {
+  font-family: "Exo 2", sans-serif;
+}
+div.btp-ma-container div.btp-ma-account span.btp-ma-edit {
+  visibility: hidden;
+  color: #ffffff60;
+  transition: color 100ms;
+  cursor: pointer;
+}
+div.btp-ma-container div.btp-ma-account span.btp-ma-edit:hover {
+  color: #ffffffa0;
+}
+
+/*# sourceMappingURL=accounts.css.map */

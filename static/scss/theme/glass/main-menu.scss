@@ -1,0 +1,203 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Top panel */
+div[data-style="MainScreenComponentStyle-containerPanel"] {
+	@include no-background();
+	@include no-border();
+
+	border-bottom: 3px solid #ffffff50;
+	
+	background: #00000050;
+
+	backdrop-filter: blur(4px);
+
+	/* Green gradient */
+	&::before {
+		@include hide();
+	}
+
+	div[data-style="UserInfoContainerStyle-containerProgressMainScreen"] {
+		/* Player XP progress */
+		& > div:nth-child(2) {
+			height: 0.5em;
+
+			border-radius: 4px;
+
+			&::after {
+				border-radius: inherit;
+			}
+		}
+	}
+
+	/* Premium subscription wrapper */
+	#{$premiumSubscriptionWrapper} {
+		/* Premium subscription container */
+		& > #{$premiumSubscriptionContainer} {
+			@include no-background();
+
+			/* Stripes */
+			& > img {
+				@include hide();
+			}
+
+			&::after {
+				content: ' ';
+
+				position: absolute;
+				
+				width: 100%;
+				height: 100%;
+				
+				border-radius: 6px;
+
+				background: #000000dd;
+			}
+		}
+	}
+}
+
+/* Challenge block */
+div[data-style="BattlePassLobbyComponentStyle-menuBattlePass"] {
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	transition: 100ms ease-in-out;
+	transition-property: background-color;
+
+	&:hover {
+		background: #00000080;
+	}
+
+	& > div[data-style="BattlePassLobbyComponentStyle-descriptionMenuPass"] {
+		@include no-background();
+
+		& > img[data-style="BattlePassLobbyComponentStyle-yeLineMainMenu"] {
+			@include hide();
+		}
+	}
+}
+
+/* Announcements block */
+div[data-style="AnnouncementHomeScreenComponentStyle-mainContainer"] {
+	/* Announcements container */
+	& > div[data-style="AnnouncementHomeScreenComponentStyle-mainBackGroundContainer"] {
+		background: #00000050;
+	
+		backdrop-filter: blur(3px);
+
+		div[data-style="AnnouncementHomeScreenComponentStyle-headerContainer"] {
+			@include no-background();
+
+			& > img[data-style="AnnouncementHomeScreenComponentStyle-yeLineMainMenu"] {
+				@include hide();
+			}
+		}
+
+		div[data-style="AnnouncementHomeScreenComponentStyle-announceDescriptionContainer"] {
+			@include no-background();
+		}
+
+		& > div[data-style="AnnouncementHomeScreenComponentStyle-navigationContainer"],
+		& > div[data-style="AnnouncementHomeScreenComponentStyle-navigationContainerCenter AnnouncementHomeScreenComponentStyle-navigationContainer"] {
+			@include no-background();
+		}
+
+		& > div[data-style="AnnouncementHomeScreenComponentStyle-navigationLabelContainer"] {
+			@include no-background();
+		}
+	}
+}
+
+/* Bottom panel */
+footer[data-style="FooterComponent-footer"] {
+	border-top: 3px solid #ffffff50;
+
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	/* Bottom left buttons (settings, friends, clans, news) */
+	& > ul > div > li {
+		@include no-border();
+	}
+}
+
+/* News close area */
+div[data-style="NewsComponentStyle-closeArea"] {
+	@include no-background();
+}
+
+/* News window */
+div[data-style="NewsComponentStyle-newsWindow"] {
+	border-right: 3px solid #ffffff80;
+
+	background: #00000050;
+
+	backdrop-filter: blur(6px);
+
+	/* News list */
+	& > div[data-style="NewsComponentStyle-newsContainer"] {
+		/* News item */
+		& > div[data-style="NewsComponentStyle-newsItemContainer"] {
+		}
+	}
+}
+
+@mixin play-button() {
+	@include no-shadow();
+
+	border: 2px solid #ffffff80;
+	border-radius: 2px;
+
+	background: #00000050;
+
+	backdrop-filter: blur(3px);
+
+	transition: 100ms ease-in-out;
+	transition-property: background-color, border-color;
+
+	&:hover {
+		background: #00000080;
+
+		border-color: #ffffffc0;
+	}
+}
+
+/* Play button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-activeItem"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-disabled"] {
+	@include play-button();
+
+	/* Animated green stripes */
+	& > div[data-style="MainScreenComponentStyle-animationPlayBlock"],
+	& > div[data-style="MainScreenComponentStyle-amimationBlockStop"] {
+		@include hide();
+	}
+}
+
+/* Mode select button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePick"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePickStop MainScreenComponentStyle-disabled"] {
+	@include play-button();
+}
+
+/* Holiday mode play button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton MainScreenComponentStyle-disabled"] {
+	@include play-button();
+}
+
+/* Chat button */
+div[data-style="ChatToggleComponentStyle-toggleButton"] {
+	& > div[data-style="ChatToggleComponentStyle-yellowLine"] {
+		@include hide();
+	}
+}
+
+/* Gradients at the sides */
+div[data-style="MainScreenComponentStyle-gradientBlock"],
+div[data-style="MainScreenComponentStyle-gradientBlockRight"] {
+	@include no-background();
+}

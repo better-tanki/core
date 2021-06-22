@@ -1,0 +1,167 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Battle statistics container */
+div[data-style="BattleTabStatisticComponentStyle-container"] {
+	& > div[data-style="BattleTabStatisticComponentStyle-containerInsideTeams BattleTabStatisticComponentStyle-containerInside"],
+	& > div[data-style="BattleTabStatisticComponentStyle-containerInsideResults BattleTabStatisticComponentStyle-containerInside"] {
+		border-radius: 4px;
+
+		background: #00000080;
+
+		backdrop-filter: blur(4px);
+
+		/* Header */
+		div[data-style="BattleTabStatisticComponentStyle-header"] {
+			@include no-background();
+			@include no-border();
+
+			border-top: 3px solid #00000050;
+			border-radius: inherit;
+
+			/* Map name */
+			& > span {
+				margin-top: 1em;
+			}
+
+			&::before,
+			&::after {
+				@include hide();
+			}
+		}
+		
+		/* Score tables */
+		div[data-style="BattleTabStatisticComponentStyle-tablesContainer"] {
+			margin-top: 1em;
+			
+			table {
+				& > thead {
+					top: 3em;
+				}
+
+				& > tbody {
+					/* Other players */
+					tr[data-style="BattleTabStatisticComponentStyle-rowBackGround"] {
+						background: #00000015;
+					}
+
+					/* Current player */
+					tr[data-style="BattleTabStatisticComponentStyle-selectedRowBackGround"] {
+						background: #00000060;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Battle notifications */
+div[data-style="BattleMessagesComponentStyle-container"] {
+	& > div[data-style="BattleMessagesComponentStyle-messageRow"] {
+		& > span[data-style="BattleMessagesComponentStyle-message"] {
+			background: #00000070;
+
+			backdrop-filter: blur(4px);
+
+			&::before,
+			&::after {
+				@include hide();
+			}
+		}
+	}
+}
+
+/* HUD buttons (statistics, pause) */
+div[data-style="BattleHudComponentStyle-buttonsContainer"] {
+	& > div[data-style="BattleHudComponentStyle-tabButton BattleHudComponentStyle-hudButton"],
+	& > div[data-style="BattleHudComponentStyle-pauseButton BattleHudComponentStyle-hudButton"] {
+		background: #00000010;
+
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+
+		&:hover {
+			background: #00000050;
+		}
+	}
+}
+
+/* Battle fund container */
+div[data-style="BattleHudComponentStyle-fundContainer"] {
+	/* Battle fund element */
+	& > div[data-style="BattleHudComponentStyle-fundElement"] {
+		background: #00000070;
+	}
+}
+
+/* Battle results statistics table */
+div[data-style="BattleKillBoardComponentStyle-tableContainer"] {
+	& > table[data-style="TableComponentStyle-table"] {
+		& > thead {
+			th {
+				@include no-background();
+			}
+		}
+
+		& > tbody {
+			& > tr {
+				background: #00000015;
+			}
+
+			& > tr#selfUserBg {
+				background: #00000060;
+			}
+		}
+	}
+}
+
+/* Player information (in battle) */
+div[data-style="UserInfoContainerStyle-containerProgressMainScreen"] {
+	/* Player XP progress */
+	& > div:nth-child(2) {
+		height: 0.5em;
+
+		border-radius: 4px;
+
+		&::after {
+			border-radius: inherit;
+		}
+	}
+}
+
+/* Battle results: player progress */
+div[data-style="BattleResultUserInfoComponentStyle-progressVictoryContainer"] {
+	div[data-style="BattleResultUserInfoComponentStyle-containerProgress"] {
+		/* Player XP progress */
+		& > div:nth-child(2) {
+			height: 0.5em;
+
+			border-radius: 4px;
+
+			&::after {
+				border-radius: inherit;
+			}
+		}
+
+		/* Player XP progress (earned) */
+		& > div:nth-child(3) {
+			@include hide();
+		}
+	}
+}
+
+/* Battle results */
+div[data-style="BattleRewardsComponentStyle-contentContainer"] {
+	& > div[data-style="BlockResultTankComponentStyle-blockTank"] {
+		& > img:last-child {
+			@include hide();
+		}
+	}
+
+	table {
+		tr[data-style="BattleRewardsComponentStyle-selectedRow"],
+		tr[data-style="BattleRewardsComponentStyle-normalRow"] {
+			background: #ffffff10;
+		}
+	}
+}

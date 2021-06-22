@@ -1,0 +1,38 @@
+div.bt-test {
+  width: 48em;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+}
+div.bt-test div.section-content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.checkbox-wrapper {
+  user-select: none;
+}
+div.checkbox-wrapper > div.checkbox {
+  display: flex;
+  width: 2em;
+  height: 1em;
+  border-radius: 16px;
+  transition: 75ms ease-in-out;
+  transition-property: width, box-shadow, background-color;
+  cursor: pointer;
+}
+div.checkbox-wrapper > div.checkbox--hover {
+  width: 3.25em;
+}
+div.checkbox-wrapper > div.checkbox--hover.checkbox--unchecked {
+  box-shadow: inset 0px 0px 0px 3px #29b6f6;
+}
+div.checkbox-wrapper > div.checkbox--unchecked {
+  box-shadow: inset 0px 0px 0px 3px #039be5;
+}
+div.checkbox-wrapper > div.checkbox--checked {
+  background-color: #4fc3f7;
+}
+
+/*# sourceMappingURL=checkbox.css.map */

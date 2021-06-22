@@ -1,0 +1,7 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Shop items container */
+div[data-style="VerticalScrollStyle-innerContainerStyle ShopCategoryOfferSectionStyle-innerContainer"] {
+	@include no-background();
+}

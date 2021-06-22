@@ -1,0 +1,171 @@
+@import '../constants';
+
+div.bt-notifications {
+	position: fixed;
+	display: flex;
+
+	flex-direction: column;
+
+	width: 30em;
+	height: 100%;
+
+	bottom: 0;
+	right: 0;
+
+	z-index: get-z('notifications');
+
+	pointer-events: none;
+}
+
+div.notification-list {
+	display: flex;
+
+	flex-direction: column-reverse;
+
+	height: 100%;
+
+	padding: 0.5em 0.5em;
+
+	font-family: 'Exo 2', sans-serif;
+
+	/* & > div.notification-list {
+		height: 100%;
+
+		margin-top: auto;
+	} */
+
+	& > div.notification {
+		position: relative;
+		display: flex;
+
+		margin-top: 0.5em;
+
+		border-radius: 2px;
+
+		font-weight: 300;
+
+		background-color: #000000aa;
+
+		backdrop-filter: blur(1px);
+
+		user-select: none;
+
+		transition-property: background-color;
+		transition: 50ms ease-in-out;
+
+		&:last-of-type {
+			margin-top: 0;
+		}
+
+		@keyframes slide-out {
+			0% {
+				right: 0;
+			}
+
+			100% {
+				right: -30em;
+			}
+		}
+
+		&.notification--slide-out {
+			animation: slide-out 500ms ease-in forwards;
+		}
+
+		&.notification--hidden {
+			right: -30em;
+		}
+
+		&.notification--hover {
+			background-color: #050505aa;
+
+			& > div.notification-level {
+				&.notification-level--debug {
+					background-color: #80deea;
+				}
+
+				&.notification-level--info {
+					background-color: #a5d6a7;
+				}
+
+				&.notification-level--warn {
+					background-color: #ffe082;
+				}
+
+				&.notification-level--error {
+					background-color: #ffab91;
+				}
+
+				&.notification-level--fatal {
+					background-color: #ff7043;
+				}
+			}
+		}
+
+		& > div.notification-level {
+			width: 0.25em;
+
+			border-radius: 4px 0 0 4px;
+
+			transition-property: background-color;
+			transition: 50ms ease-in-out;
+
+			&.notification-level--debug {
+				background-color: #4dd0e1;
+			}
+
+			&.notification-level--info {
+				background-color: #81c784;
+			}
+
+			&.notification-level--warn {
+				background-color: #ffd54f;
+			}
+
+			&.notification-level--error {
+				background-color: #ff8a65;
+			}
+
+			&.notification-level--fatal {
+				background-color: #ff5722;
+			}
+		}
+
+		& > div.notification-content {
+			display: flex;
+
+			flex-direction: column;
+
+			width: 100%;
+
+			padding: 0.8em 1em;
+
+			& > div.notification-title-container {
+				display: flex;
+
+				align-items: center;
+
+				& > div.notification-icon {
+					display: flex;
+
+					margin-right: 0.5em;
+
+					img {
+						width: 2em;
+						height: 2em;
+
+						min-width: 2em;
+						min-height: 2em;
+
+						border-radius: 50%;
+						
+						object-fit: cover;
+					}
+				}
+
+				& > div.notification-title {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}

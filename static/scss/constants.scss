@@ -1,0 +1,36 @@
+$CONSTANTS_COLORS: (
+	primary: #2196f3,
+	secondary: #4caf50,
+
+	primary-text: #ffffff,
+	secondary-text: #ffffff
+);
+
+$CONSTANTS_Z: (
+	notifications: 1000,
+	modals: 900
+);
+
+/// @param {string} $name
+/// @return {number}
+/// @require $CONSTANTS_Z
+/// @throws 'Unknown constant `#{$name}`.'
+@function get-z($name) {
+	@if(not map-has-key($CONSTANTS_Z, $name)) {
+		@error('Unknown constant `#{$name}`');
+	}
+
+	@return map-get($CONSTANTS_Z, $name);
+}
+
+/// @param {string} $name
+/// @return {number}
+/// @require $CONSTANTS_COLORS
+/// @throws 'Unknown constant `#{$name}`.'
+@function get-color($name) {
+	@if(not map-has-key($CONSTANTS_COLORS, $name)) {
+		@error('Unknown constant `#{$name}`');
+	}
+
+	@return map-get($CONSTANTS_COLORS, $name);
+}

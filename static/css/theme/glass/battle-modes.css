@@ -1,0 +1,22 @@
+/* Battle mdoe select menu */
+div[data-style=BattlePickComponentStyle-blockCenter] {
+  /* Battle mode list item */
+}
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style=BattlePickComponentStyle-blockCard],
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style="BattlePickComponentStyle-quickBattleCard BattlePickComponentStyle-blockCard"] {
+  border: none;
+  border-bottom: 3px solid #ffffff50;
+  border-radius: 2px 2px 0 0;
+  transition: 250ms ease-in-out;
+  transition-property: border-bottom-color;
+}
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style=BattlePickComponentStyle-blockCard]:hover,
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style="BattlePickComponentStyle-quickBattleCard BattlePickComponentStyle-blockCard"]:hover {
+  border-bottom-color: #ffffffc0;
+}
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style=BattlePickComponentStyle-blockCard] > img,
+div[data-style=BattlePickComponentStyle-blockCenter] div[data-style="BattlePickComponentStyle-quickBattleCard BattlePickComponentStyle-blockCard"] > img {
+  display: none;
+}
+
+/*# sourceMappingURL=battle-modes.css.map */

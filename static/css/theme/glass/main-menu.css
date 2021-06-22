@@ -1,0 +1,181 @@
+/* Top panel */
+div[data-style=MainScreenComponentStyle-containerPanel] {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #ffffff50;
+  background: #00000050;
+  backdrop-filter: blur(4px);
+  /* Green gradient */
+  /* Premium subscription wrapper */
+}
+div[data-style=MainScreenComponentStyle-containerPanel]::before {
+  display: none;
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div[data-style=UserInfoContainerStyle-containerProgressMainScreen] {
+  /* Player XP progress */
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div[data-style=UserInfoContainerStyle-containerProgressMainScreen] > div:nth-child(2) {
+  height: 0.5em;
+  border-radius: 4px;
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div[data-style=UserInfoContainerStyle-containerProgressMainScreen] > div:nth-child(2)::after {
+  border-radius: inherit;
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div.cHCHun {
+  /* Premium subscription container */
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div.cHCHun > div.ioLhrE {
+  background: transparent;
+  /* Stripes */
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div.cHCHun > div.ioLhrE > img {
+  display: none;
+}
+div[data-style=MainScreenComponentStyle-containerPanel] div.cHCHun > div.ioLhrE::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background: #000000dd;
+}
+
+/* Challenge block */
+div[data-style=BattlePassLobbyComponentStyle-menuBattlePass] {
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  transition: 100ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=BattlePassLobbyComponentStyle-menuBattlePass]:hover {
+  background: #00000080;
+}
+div[data-style=BattlePassLobbyComponentStyle-menuBattlePass] > div[data-style=BattlePassLobbyComponentStyle-descriptionMenuPass] {
+  background: transparent;
+}
+div[data-style=BattlePassLobbyComponentStyle-menuBattlePass] > div[data-style=BattlePassLobbyComponentStyle-descriptionMenuPass] > img[data-style=BattlePassLobbyComponentStyle-yeLineMainMenu] {
+  display: none;
+}
+
+/* Announcements block */
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] {
+  /* Announcements container */
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] {
+  background: #00000050;
+  backdrop-filter: blur(3px);
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] div[data-style=AnnouncementHomeScreenComponentStyle-headerContainer] {
+  background: transparent;
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] div[data-style=AnnouncementHomeScreenComponentStyle-headerContainer] > img[data-style=AnnouncementHomeScreenComponentStyle-yeLineMainMenu] {
+  display: none;
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] div[data-style=AnnouncementHomeScreenComponentStyle-announceDescriptionContainer] {
+  background: transparent;
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-navigationContainer], div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] > div[data-style="AnnouncementHomeScreenComponentStyle-navigationContainerCenter AnnouncementHomeScreenComponentStyle-navigationContainer"] {
+  background: transparent;
+}
+div[data-style=AnnouncementHomeScreenComponentStyle-mainContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-mainBackGroundContainer] > div[data-style=AnnouncementHomeScreenComponentStyle-navigationLabelContainer] {
+  background: transparent;
+}
+
+/* Bottom panel */
+footer[data-style=FooterComponent-footer] {
+  border-top: 3px solid #ffffff50;
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  /* Bottom left buttons (settings, friends, clans, news) */
+}
+footer[data-style=FooterComponent-footer] > ul > div > li {
+  border: none;
+}
+
+/* News close area */
+div[data-style=NewsComponentStyle-closeArea] {
+  background: transparent;
+}
+
+/* News window */
+div[data-style=NewsComponentStyle-newsWindow] {
+  border-right: 3px solid #ffffff80;
+  background: #00000050;
+  backdrop-filter: blur(6px);
+  /* News list */
+}
+div[data-style=NewsComponentStyle-newsWindow] > div[data-style=NewsComponentStyle-newsContainer] {
+  /* News item */
+}
+/* Play button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-activeItem"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-disabled"] {
+  box-shadow: none;
+  text-shadow: none;
+  border: 2px solid #ffffff80;
+  border-radius: 2px;
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-color;
+  /* Animated green stripes */
+}
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-activeItem"]:hover,
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-disabled"]:hover {
+  background: #00000080;
+  border-color: #ffffffc0;
+}
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-activeItem"] > div[data-style=MainScreenComponentStyle-animationPlayBlock], div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-activeItem"] > div[data-style=MainScreenComponentStyle-amimationBlockStop],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-disabled"] > div[data-style=MainScreenComponentStyle-animationPlayBlock],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonPlay MainScreenComponentStyle-disabled"] > div[data-style=MainScreenComponentStyle-amimationBlockStop] {
+  display: none;
+}
+
+/* Mode select button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePick"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePickStop MainScreenComponentStyle-disabled"] {
+  box-shadow: none;
+  text-shadow: none;
+  border: 2px solid #ffffff80;
+  border-radius: 2px;
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-color;
+}
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePick"]:hover,
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-buttonBattlePickStop MainScreenComponentStyle-disabled"]:hover {
+  background: #00000080;
+  border-color: #ffffffc0;
+}
+
+/* Holiday mode play button */
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton"],
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton MainScreenComponentStyle-disabled"] {
+  box-shadow: none;
+  text-shadow: none;
+  border: 2px solid #ffffff80;
+  border-radius: 2px;
+  background: #00000050;
+  backdrop-filter: blur(3px);
+  transition: 100ms ease-in-out;
+  transition-property: background-color, border-color;
+}
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton"]:hover,
+div[data-style="MainScreenComponentStyle-playButtonContainer MainScreenComponentStyle-holidayButton MainScreenComponentStyle-disabled"]:hover {
+  background: #00000080;
+  border-color: #ffffffc0;
+}
+
+/* Chat button */
+div[data-style=ChatToggleComponentStyle-toggleButton] > div[data-style=ChatToggleComponentStyle-yellowLine] {
+  display: none;
+}
+
+/* Gradients at the sides */
+div[data-style=MainScreenComponentStyle-gradientBlock],
+div[data-style=MainScreenComponentStyle-gradientBlockRight] {
+  background: transparent;
+}
+
+/*# sourceMappingURL=main-menu.css.map */

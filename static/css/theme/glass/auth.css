@@ -1,0 +1,47 @@
+/* Header */
+div[data-style=HeaderComponentStyle-linkBar] {
+  background: transparent;
+  /* Bottom border line */
+}
+div[data-style=HeaderComponentStyle-linkBar] > div[data-style=HeaderComponentStyle-lineBlock] {
+  display: none;
+}
+
+/* Auth form */
+div[data-style=EntranceComponentStyle-ContainerForm] {
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
+div[data-style=EntranceComponentStyle-ContainerForm] > form {
+  width: 50em;
+  margin: 0 1em;
+}
+div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=RegistrationComponentStyle-containerItem], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginTopInput"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginContainerInput"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=EntranceComponentStyle-blockCheckedLink], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="ButtonComponentStyle-disabled EntranceComponentStyle-buttonNoActive EntranceComponentStyle-styleButtons Font-normal Font-normal RegistrationComponentStyle-buttonEnd"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="EntranceComponentStyle-buttonActive EntranceComponentStyle-styleButtons Font-normal RegistrationComponentStyle-buttonEndActive Font-normal"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=LoginComponentStyle-socialNetworks], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=EntranceComponentStyle-blockInformation] {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=RegistrationComponentStyle-containerItem] > label[data-style="EntranceComponentStyle-containerInput Font-normal"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=RegistrationComponentStyle-containerItem] > input, div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginTopInput"] > label[data-style="EntranceComponentStyle-containerInput Font-normal"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginTopInput"] > input, div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginContainerInput"] > label[data-style="EntranceComponentStyle-containerInput Font-normal"], div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginContainerInput"] > input {
+  width: 100%;
+  margin: 0;
+}
+div[data-style=EntranceComponentStyle-ContainerForm] > form > div[data-style=EntranceComponentStyle-blockCheckedLink] > div[data-style=RegistrationComponentStyle-licenseAgreement] {
+  width: 100%;
+}
+
+/* Footer */
+div[data-style="HeaderComponentStyle-headerLinkBar HeaderComponentStyle-linkBar"] {
+  background: transparent;
+  /* Top border line */
+  /* Social networks */
+}
+div[data-style="HeaderComponentStyle-headerLinkBar HeaderComponentStyle-linkBar"] > div[data-style=HeaderComponentStyle-lineBlock] {
+  display: none;
+}
+div[data-style="HeaderComponentStyle-headerLinkBar HeaderComponentStyle-linkBar"] div[data-style=HeaderComponentStyle-blockIconSocialNetwork] {
+  display: none;
+  /* Social network button */
+}
+
+/*# sourceMappingURL=auth.css.map */

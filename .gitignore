@@ -1,12 +1,11 @@
 /node_modules
 /build
 /dist
-/logs/*
+/logs
 
-/static/css/*
-!/static/css/scss
+/screenshots
 
-/plugins/*
-!/plugins/src
-!/plugins/plugin-api.d.ts
-!/plugins/tsconfig.json
+# /plugins/*
+# !/plugins/plugins.d.ts
+
+/better-tanki-core.*.zip

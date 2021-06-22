@@ -1,0 +1,41 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Friends menu container */
+div[data-style="FriendListComponentStyle-containerFriends"] {
+	/* Friends list item */
+	div[data-style="FriendListComponentStyle-blockList"] {
+		border-radius: 2px;
+
+		background: #ffffff15;
+
+		transition: 100ms ease-in-out;
+		transition-property: background-color;
+		
+		&:hover {
+			background: #ffffff30;
+		}
+
+		& > div {
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+
+			&:first-child {
+				margin-left: 0.6em;
+			}
+
+			&:last-child {
+				margin-right: 0.6em;
+			}
+		}
+	}
+
+	/* Requests / referrals list */
+	table[data-style="TableComponentStyle-table"] {
+		& > thead {
+			th {
+				@include no-background();
+			}
+		}
+	}
+}

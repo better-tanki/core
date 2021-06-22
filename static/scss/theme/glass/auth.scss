@@ -1,0 +1,75 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+/* Header */
+div[data-style="HeaderComponentStyle-linkBar"] {
+	@include no-background();
+
+	/* Bottom border line */
+	& > div[data-style="HeaderComponentStyle-lineBlock"] {
+		@include hide();
+	}
+}
+
+/* Auth form */
+div[data-style="EntranceComponentStyle-ContainerForm"] {
+	@include no-background();
+	@include no-shadow();
+
+	& > form {
+		width: 50em;
+
+		margin: 0 1em;
+
+		& > div[data-style="RegistrationComponentStyle-containerItem"],
+		& > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginTopInput"],
+		& > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginContainerInput"],
+		& > div[data-style="EntranceComponentStyle-blockCheckedLink"],
+		& > div[data-style="ButtonComponentStyle-disabled EntranceComponentStyle-buttonNoActive EntranceComponentStyle-styleButtons Font-normal Font-normal RegistrationComponentStyle-buttonEnd"],
+		& > div[data-style="EntranceComponentStyle-buttonActive EntranceComponentStyle-styleButtons Font-normal RegistrationComponentStyle-buttonEndActive Font-normal"],
+		& > div[data-style="LoginComponentStyle-socialNetworks"],
+		& > div[data-style="EntranceComponentStyle-blockInformation"] {
+			width: 100%;
+
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		
+		& > div[data-style="RegistrationComponentStyle-containerItem"],
+		& > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginTopInput"],
+		& > div[data-style="RegistrationComponentStyle-containerItem EntranceComponentStyle-marginContainerInput"] {
+			& > label[data-style="EntranceComponentStyle-containerInput Font-normal"],
+			& > input {
+				width: 100%;
+
+				margin: 0;
+			}
+		}
+
+		& > div[data-style="EntranceComponentStyle-blockCheckedLink"] {
+			& > div[data-style="RegistrationComponentStyle-licenseAgreement"] {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Footer */
+div[data-style="HeaderComponentStyle-headerLinkBar HeaderComponentStyle-linkBar"] {
+	@include no-background();
+
+	/* Top border line */
+	& > div[data-style="HeaderComponentStyle-lineBlock"] {
+		@include hide();
+	}
+
+	/* Social networks */
+	div[data-style="HeaderComponentStyle-blockIconSocialNetwork"] {
+		@include hide();
+
+		/* Social network button */
+		& > a[href] {
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/* Settings container */
+div[data-style=SettingsComponentStyle-blockContentOptions] {
+  /* Settings tabs */
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] {
+  /* Any tab */
+  /* Unselected tab */
+  /* Selected tab */
+  /* Original 'selected' block */
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 18em;
+  height: 5em;
+  margin-top: 0px;
+  z-index: 4;
+  cursor: pointer;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li::after {
+  content: " ";
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li::after {
+  position: absolute;
+  width: inherit;
+  height: 3.5em;
+  right: 0;
+  border-radius: 4px;
+  z-index: -1;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li > span {
+  margin-top: 0.1em;
+  margin-left: 1.875em;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.15) 0.254em 0.254em 0.338em;
+  line-height: normal;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style=SettingsComponentStyle-menuItemOptions] {
+  /* Hover behaviour */
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style=SettingsComponentStyle-menuItemOptions] > span {
+  color: #ffffff80;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style=SettingsComponentStyle-menuItemOptions]:hover::after {
+  background: #303030;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style=SettingsComponentStyle-menuItemOptions]::after {
+  transition: 300ms ease-in-out;
+  transition-property: background-color;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style="SettingsComponentStyle-menuItemOptions SettingsComponentStyle-activeItemOptions"] > span {
+  color: #ffffff;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style="SettingsComponentStyle-menuItemOptions SettingsComponentStyle-activeItemOptions"]::after {
+  background: #2780e6;
+  animation: bt-opacity-select 300ms ease-in-out;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li[data-style=SettingsComponentStyle-slideMenuOptions] {
+  display: none;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li.bt-settings-tab--bt {
+  margin-top: 1em;
+}
+div[data-style=SettingsComponentStyle-blockContentOptions] ul[data-style=SettingsComponentStyle-blockMenuOptions] > li.bt-settings-tab--bt > span {
+  text-transform: none;
+  color: #2780e6;
+}
+
+@keyframes bt-opacity-select {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=settings.css.map */

@@ -1,0 +1,36 @@
+/* Clan menu */
+div[data-style=ClanCommonStyle-content] {
+  background: transparent;
+  /* Information */
+  /* Description */
+  /* Members */
+}
+div[data-style=ClanCommonStyle-content] div[data-style=ClanHeaderComponentStyle-blockInform] {
+  background: transparent;
+  border: none;
+  /* Statistics */
+}
+div[data-style=ClanCommonStyle-content] div[data-style=ClanHeaderComponentStyle-blockInform] > div[data-style=ClanStatisticsComponentStyle-clan] > div[data-style="ClanStatisticsComponentStyle-areCommon ClanStatisticsComponentStyle-marginLeftAreCommon"], div[data-style=ClanCommonStyle-content] div[data-style=ClanHeaderComponentStyle-blockInform] > div[data-style=ClanStatisticsComponentStyle-clan] > div[data-style=ClanStatisticsComponentStyle-areCommon] {
+  background: transparent;
+  border: none;
+  box-shadow: 3px 3px 3px 0px #00000050;
+}
+div[data-style=ClanCommonStyle-content] div[data-style=ClanInfoComponentStyle-messageClan] {
+  background: transparent;
+  border: none;
+}
+div[data-style=ClanCommonStyle-content] table[data-style=TableComponentStyle-table] > thead th {
+  background: transparent;
+}
+div[data-style=ClanCommonStyle-content] table[data-style=TableComponentStyle-table] > tbody tr {
+  margin-bottom: 3px;
+}
+div[data-style=ClanCommonStyle-content] table[data-style=TableComponentStyle-table] > tbody tr[data-style=ClanCommonStyle-row] {
+  background: #ffffff0a;
+}
+div[data-style=ClanCommonStyle-content] table[data-style=TableComponentStyle-table] > tbody tr[data-style="ClanCommonStyle-rowEmpty ClanCommonStyle-row"] {
+  opacity: 1;
+  background: #ffffff06;
+}
+
+/*# sourceMappingURL=clans.css.map */

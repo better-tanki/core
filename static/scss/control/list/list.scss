@@ -1,0 +1,31 @@
+div.list {
+	display: flex;
+
+	flex-direction: column;
+
+	padding: 0.25em;
+
+	border-radius: 2px;
+
+	background-color: #000000aa;
+
+	& > div.list-item {
+		padding: 0.5em;
+
+		border-radius: 2px;
+
+		background-color: #00000000;
+
+		&:not(:last-of-type) {
+			margin-bottom: 0.25em;
+		}
+
+		&.list-item--hover {
+			background-color: #ffffff20;
+		}
+
+		&.list-item--mouse-out {
+			
+		}
+	}
+}
