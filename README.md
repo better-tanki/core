@@ -16,6 +16,13 @@ There will be compile errors, ignore them.
 Available in [misc/](misc/) directory.  
 A lot of commented out snippets can be found in [src/early-init.ts](src/early-init.ts) file
 
+# Building and running
+
+`npm install`  
+`npm run build`  
+`npm run build-styles`  
+`npm start`
+
 ## Keybinding
 
 `Ctrl + Shift + I` - Toggle DevTools  
